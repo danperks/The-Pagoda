@@ -46,14 +46,30 @@ int main (){// based of ms example
     }
     freeaddrinfo(result);
     
-    while(true):
-        string message = cin<<"Enter To Send"<<endl;
+    while(true){
+        String message = cin<<"Enter To Send"<<endl;
         WSAResult = send(ourSocket,message,(int)strlen(message),0);
         if(WSAResult == SOCKET_ERROR){
             printf("Message Send Fail");
             closesocket(ourSocket);
             WSACleanup()
+            return 1;
         }
+        printf("Message Sent");
+        break;
+        // build check to break out once user doesnt want to send no more messsages
+    }
+    WSAResult = shutdown(ourSocket,SD_SEND);
+    do{
+        WSAResult = recv(ourSocket,recvbuf,recvbuflen,0);
+        if (WSAResult > 0){
+            printf(WSAResult);
+        }
+    }
+    while(WSAResult>0);
+
+    closesocket(ourSocket);
+    WSACleanup();
 
     
 
