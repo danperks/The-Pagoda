@@ -13,7 +13,9 @@
 //#pragma comment (lib, "Mswsock.lib")
 //#pragma comment (lib, "AdvApi32.lib")
 
-int main(int argc, char **argv) {// based of ms example
+int main(int argc, char **argv) {
+    // based of ms example
+    std::cout<<"it ran"<<std::endl;
     WSADATA wsaData;
     struct addrinfo * result = NULL, *ptr = NULL, protocol;
     SOCKET ourSocket;
@@ -22,14 +24,14 @@ int main(int argc, char **argv) {// based of ms example
         printf("Socket failed");
         return 1;
     }
-    protocol.ai_family = AF_INET;
+    protocol.ai_family = AF_UNSPEC;
     protocol.ai_socktype = SOCK_STREAM;
     protocol.ai_protocol = IPPROTO_TCP;
     protocol.ai_flags = AI_PASSIVE;
     char recievedMessage[512];
     WSAResult = getaddrinfo(argv[1], DEFAULT_PORT, &protocol, &result);
-    if(WSAResult !=0){
-        printf("Failure to get adress info");
+    if(WSAResult !=0 ){
+        printf("Failure to get address info");
         WSACleanup();
         return 1;
 
