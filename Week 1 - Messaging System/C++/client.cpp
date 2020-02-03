@@ -1,19 +1,25 @@
+#define _WIN32_WINNT 0x501 
+#define WIN32_LEAN_AND_MEAN
 #include <stdio.h> // I/O buffer
 #include <winsock2.h>
 #include <iostream> // For cout
 #include <ws2tcpip.h>
 #include <stdlib.h>
-#include <stdio.h>
+#include <windows.h>
 
-#define _WIN32_WINNT 0x501 // needs -lws2_32 in g++ compile statement
+// needs -lws2_32 in g++ compile statement
 #define DEFAULT_PORT "27015"
+#pragma comment (lib, "Ws2_32.lib")
+#pragma comment (lib, "libws2_32_a.lib")
+//#pragma comment (lib, "Mswsock.lib")
+//#pragma comment (lib, "AdvApi32.lib")
 
 int main (){// based of ms example
     WSADATA wsaData;
     struct addrinfo * result = NULL, *ptr = NULL, protocol;
-    int ourSocket;
+    SOCKET ourSocket;
     int WSAResult = WSAStartup(MAKEWORD(2,2), &wsaData);
-    if (ourSocket != 0) {
+    if (WSAResult != 0) {
         printf("Socket failed");
         return 1;
     }
@@ -21,7 +27,7 @@ int main (){// based of ms example
     protocol.ai_socktype = SOCK_STREAM;
     protocol.ai_protocol = IPPROTO_TCP;
     protocol.ai_flags = AI_PASSIVE;
-
+    char recievedMessage[512];
     WSAResult = getaddrinfo(NULL, DEFAULT_PORT, &protocol, &result);
     if(WSAResult !=0){
         printf("Failure to get adress info");
@@ -47,12 +53,14 @@ int main (){// based of ms example
     freeaddrinfo(result);
     
     while(true){
-        String message = cin<<"Enter To Send"<<endl;
+        std::cout<<"Enter To Send"<<std::endl;
+        char message[10];
+        std::cin>>message;
         WSAResult = send(ourSocket,message,(int)strlen(message),0);
         if(WSAResult == SOCKET_ERROR){
             printf("Message Send Fail");
             closesocket(ourSocket);
-            WSACleanup()
+            WSACleanup();
             return 1;
         }
         printf("Message Sent");
@@ -61,9 +69,9 @@ int main (){// based of ms example
     }
     WSAResult = shutdown(ourSocket,SD_SEND);
     do{
-        WSAResult = recv(ourSocket,recvbuf,recvbuflen,0);
+        WSAResult = recv(ourSocket, recievedMessage,512,0);
         if (WSAResult > 0){
-            printf(WSAResult);
+            printf("Bytes received: %d\n",WSAResult);
         }
     }
     while(WSAResult>0);
