@@ -30,12 +30,7 @@ int main(int argc, char **argv) {
     protocol.ai_flags = AI_PASSIVE;
     char recievedMessage[512];
     WSAResult = getaddrinfo(argv[1], DEFAULT_PORT, &protocol, &result);
-    if(WSAResult !=0 ){
-        printf("Failure to get address info");
-        WSACleanup();
-        return 1;
-
-    }
+    
     for (ptr = result;ptr != NULL;ptr = ptr -> ai_next){
         ourSocket = socket(ptr -> ai_family,ptr -> ai_socktype,ptr ->ai_protocol);
         if (ourSocket == INVALID_SOCKET){
