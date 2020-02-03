@@ -27,7 +27,7 @@
 *.lib
 
 # Executables
-*.exe
+*.json
 *.out
 *.app
 .vscode/c_cpp_properties.json
