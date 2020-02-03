@@ -10,11 +10,10 @@
 // needs -lws2_32 in g++ compile statement
 #define DEFAULT_PORT "27015"
 #pragma comment (lib, "Ws2_32.lib")
-#pragma comment (lib, "libws2_32_a.lib")
 //#pragma comment (lib, "Mswsock.lib")
 //#pragma comment (lib, "AdvApi32.lib")
 
-int main (){// based of ms example
+int main(int argc, char **argv) {// based of ms example
     WSADATA wsaData;
     struct addrinfo * result = NULL, *ptr = NULL, protocol;
     SOCKET ourSocket;
@@ -28,7 +27,7 @@ int main (){// based of ms example
     protocol.ai_protocol = IPPROTO_TCP;
     protocol.ai_flags = AI_PASSIVE;
     char recievedMessage[512];
-    WSAResult = getaddrinfo(NULL, DEFAULT_PORT, &protocol, &result);
+    WSAResult = getaddrinfo(argv[1], DEFAULT_PORT, &protocol, &result);
     if(WSAResult !=0){
         printf("Failure to get adress info");
         WSACleanup();
