@@ -19,7 +19,3 @@ Should handle the message sending and receiving, as well as new clients
 ### Client
 
 Should connect to the server, but be formatted for the user
-
-## Useful Links
-
-- https://github.com/bloodead/IRC - Premade server we should probably copy

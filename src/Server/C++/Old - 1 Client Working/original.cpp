@@ -29,7 +29,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>The-Pagoda/server.cpp at d282e59d25733895366f917b471bac2719eaabae · danperks/The-Pagoda</title>
+  <title>The-Pagoda/original.cpp at d282e59d25733895366f917b471bac2719eaabae · danperks/The-Pagoda</title>
     <meta name="description" content="PROJECT. Contribute to danperks/The-Pagoda development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -39,10 +39,10 @@
     <meta property="og:image" content="https://avatars2.githubusercontent.com/u/49082234?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="danperks/The-Pagoda" /><meta property="og:url" content="https://github.com/danperks/The-Pagoda" /><meta property="og:description" content="PROJECT. Contribute to danperks/The-Pagoda development by creating an account on GitHub." />
 
   <link rel="assets" href="https://github.githubassets.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NDkwOTYzMjMzOjE3NjVlMjk1NmI3MWZjNGZiZmFmMWYxM2U0ZmQ3YjE5M2M5NDhlYzRmOWEwNDc1YWYyMmY3ZWE4MDhlNmQ2NzQ=--997f8ad75858bc71ceeb2a3de975dc3e6980bd85">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NDkwOTYzMjMzOmE0MWE0YWE5MDU5MTU0NWMwMTc1YzBlODQ3YTdjMTI1YjUyZTBmY2YwNDJhM2NkZmE3YWJiNTVlOTI1NTMyNTI=--43da156c8acd768a05b9028435216cb3722cf522">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
 
-  <meta name="request-id" content="F257:11ABA:8727A3:C63855:5E474060" data-pjax-transient="true" /><meta name="html-safe-nonce" content="1973a6a158321a5f8baffbe04d608a447565702a" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9kYW5wZXJrcy9UaGUtUGFnb2RhL3RyZWUvZDI4MmU1OWQyNTczMzg5NTM2NmY5MTdiNDcxYmFjMjcxOWVhYWJhZS9XZWVrJTIwMSUyMC0lMjBNZXNzYWdpbmclMjBTeXN0ZW0vQyUyQiUyQiIsInJlcXVlc3RfaWQiOiJGMjU3OjExQUJBOjg3MjdBMzpDNjM4NTU6NUU0NzQwNjAiLCJ2aXNpdG9yX2lkIjoiMTMwMTM5MjgwMTc0ODc2ODEzIiwicmVnaW9uX2VkZ2UiOiJhbXMiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-pjax-transient="true" /><meta name="visitor-hmac" content="f1813d4ec5bf5e5df2a9fda5618dbca55d59599c5432167e84a3a6642b07a080" data-pjax-transient="true" />
+  <meta name="request-id" content="F257:11ABA:872BC2:C63A9E:5E474063" data-pjax-transient="true" /><meta name="html-safe-nonce" content="1973a6a158321a5f8baffbe04d608a447565702a" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9kYW5wZXJrcy9UaGUtUGFnb2RhL3RyZWUvZDI4MmU1OWQyNTczMzg5NTM2NmY5MTdiNDcxYmFjMjcxOWVhYWJhZS9XZWVrJTIwMSUyMC0lMjBNZXNzYWdpbmclMjBTeXN0ZW0vQyUyQiUyQiIsInJlcXVlc3RfaWQiOiJGMjU3OjExQUJBOjg3MkJDMjpDNjNBOUU6NUU0NzQwNjMiLCJ2aXNpdG9yX2lkIjoiMTMwMTM5MjgwMTc0ODc2ODEzIiwicmVnaW9uX2VkZ2UiOiJhbXMiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-pjax-transient="true" /><meta name="visitor-hmac" content="706b10fe78b1ccc769e47f6b302f477878a33714e76100ee86c9738bb88119cf" data-pjax-transient="true" />
 
 
 
@@ -76,21 +76,21 @@
 
       <meta name="expected-hostname" content="github.com">
 
-      <meta name="js-proxy-site-detection-payload" content="NzgzNzI2MDg2NGRlNzVhYzVlZWFkYjA4MmNlODE4Mzg2ZGVmYWEzNzMzN2RiMzllNjMwMjFmYjRkNWZkOWI1OXx7InJlbW90ZV9hZGRyZXNzIjoiMzEuMjA1LjIxMS44NyIsInJlcXVlc3RfaWQiOiJGMjU3OjExQUJBOjg3MjdBMzpDNjM4NTU6NUU0NzQwNjAiLCJ0aW1lc3RhbXAiOjE1ODE3Mjc4NDMsImhvc3QiOiJnaXRodWIuY29tIn0=">
+      <meta name="js-proxy-site-detection-payload" content="ZjZlNGI3OTBhNTE5Yjk5OWRiYzc5ZTE4N2VlM2Q1MjZjMGZhYTlhMTA3YmZhNjA1MmU0MzRlZDllOGMwZTgxZXx7InJlbW90ZV9hZGRyZXNzIjoiMzEuMjA1LjIxMS44NyIsInJlcXVlc3RfaWQiOiJGMjU3OjExQUJBOjg3MkJDMjpDNjNBOUU6NUU0NzQwNjMiLCJ0aW1lc3RhbXAiOjE1ODE3Mjc4NTMsImhvc3QiOiJnaXRodWIuY29tIn0=">
 
     <meta name="enabled-features" content="MARKETPLACE_FEATURED_BLOG_POSTS,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,MARKETPLACE_PENDING_INSTALLATIONS,RELATED_ISSUES,GHE_CLOUD_TRIAL">
 
   <meta http-equiv="x-pjax-version" content="18ec221c87e433e9ed183e49686be1bf">
   
 
-      <link href="https://github.com/danperks/The-Pagoda/commits/d282e59d25733895366f917b471bac2719eaabae.atom?token=ALWO66QAY5JDVO224I4J73V4KRZOG" rel="alternate" title="Recent Commits to The-Pagoda:d282e59d25733895366f917b471bac2719eaabae" type="application/atom+xml">
+      <link href="https://github.com/danperks/The-Pagoda/commits/d282e59d25733895366f917b471bac2719eaabae.atom?token=ALWO66SWZ2ICLUPFGXEFUZN4KRZO2" rel="alternate" title="Recent Commits to The-Pagoda:d282e59d25733895366f917b471bac2719eaabae" type="application/atom+xml">
 
   <meta name="go-import" content="github.com/danperks/The-Pagoda git https://github.com/danperks/The-Pagoda.git">
 
   <meta name="octolytics-dimension-user_id" content="49082234" /><meta name="octolytics-dimension-user_login" content="danperks" /><meta name="octolytics-dimension-repository_id" content="236722508" /><meta name="octolytics-dimension-repository_nwo" content="danperks/The-Pagoda" /><meta name="octolytics-dimension-repository_public" content="false" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="236722508" /><meta name="octolytics-dimension-repository_network_root_nwo" content="danperks/The-Pagoda" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="true" />
 
 
-    <link rel="canonical" href="https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -163,7 +163,7 @@
           spellcheck="false"
           autocomplete="off"
           >
-          <input type="hidden" value="z+USHQ4zmnp75spNCL8F/TkAYpEYhhTQFom7cRrhGkHMKpgBvtAboB408/ayfGtUXkRpNVnvl388BhWQaa14JA==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+          <input type="hidden" value="S/A8C6alDSp8pG4QD20w8Dax+GfiqgRIijs08FA+P5BIP7YXFkaM8Bl2V6u1rl5ZUfXzw6PDh+egtJoRI3Jd9Q==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
           <input type="hidden" class="js-site-search-type-field" name="type" >
             <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
@@ -314,7 +314,7 @@
       <img class="avatar" height="20" width="20" alt="@danperks" src="https://avatars2.githubusercontent.com/u/49082234?s=60&amp;v=4" />
       danperks
 </a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Hnkp/fdA4VpdIeKzLf36md/QNBgkkxRrnOjD3Wc881PF2NqPskI8FTbvZqxypaAMx2vs2xQS2AwYMO72FAIhSw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="TfCTyjMdmTVbpEDzsOtaVxQaxmtIGz1XWTfoV/yQrcmWUWC4dh9EejBqxOzvswDCDKEeqHia8TDd78V8j65/0Q==" />
       <button type="submit" class="Header-link mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15 d-lg-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
         <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9V7H8V5h4V3l4 3-4 3zm-2 3H6V3L2 1h8v3h1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v11.38c0 .39.22.73.55.91L6 16.01V13h4c.55 0 1-.45 1-1V8h-1v4z"/></svg>
         Sign out
@@ -406,7 +406,7 @@
   " data-team-hovercards-enabled>
   <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
     <summary class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit "
-      role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:49082234,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:49082234,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp&quot;}}" data-hydro-click-hmac="f630ebb1d8b442ae5b2f3744d1b344eae30810db4211b2235932e943dc951792">
+      role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:49082234,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:49082234,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp&quot;}}" data-hydro-click-hmac="537891038bd3122a765b2b45c776bce708b3fb74586cb6bc438e72365cef8e41">
       <div class="d-flex">
         <div class="f6 lh-condensed user-status-header
           d-inline-block v-align-middle
@@ -433,7 +433,7 @@
       </div>
     </summary>
     <details-dialog class="details-dialog rounded-1 anim-fade-in fast Box Box--overlay" role="dialog" tabindex="-1">
-      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="oCS7X596nSotaWudC89O9NGfZDk0yNl5aeJNa9LWh1lCLeHfdNFN6wXexjPSaPKRvgCCX268oQDgdxUmKCvI7w==" />
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="38Ccun7eNZSDdkVj6hT3dKQLtHn8OTDXH6V5Cy76FAA9ycY6lXXlVavB6M0zs0sRy5RSH6ZNSK6WMCFG1Adbtg==" />
         <div class="Box-header bg-gray border-bottom p-3">
           <button class="Box-btn-octicon js-toggle-user-status-edit btn-octicon float-right" type="reset" aria-label="Close dialog" data-close-dialog>
             <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
@@ -551,17 +551,17 @@
       </li>
       <li class="dropdown-divider" role="none"></li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-02-15T01:20:43+00:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-02-15T01:20:53+00:00">
             in 30 minutes
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-02-15T01:50:43+00:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-02-15T01:50:53+00:00">
             in 1 hour
           </button>
         </li>
         <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-02-15T04:50:43+00:00">
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-02-15T04:50:53+00:00">
             in 4 hours
           </button>
         </li>
@@ -619,10 +619,10 @@
     class="dropdown-item btn-link"
     role="menuitem"
     data-feature-preview-trigger-url="/users/danperks/feature_previews"
-    data-feature-preview-close-details="{&quot;event_type&quot;:&quot;feature_preview.clicks.close_modal&quot;,&quot;payload&quot;:{&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp&quot;,&quot;user_id&quot;:49082234}}"
-    data-feature-preview-close-hmac="54a6acd2f60779a8c5b163153d51e82ac54ff3bc959551f2659ba0eca57af8a5"
-    data-hydro-click="{&quot;event_type&quot;:&quot;feature_preview.clicks.open_modal&quot;,&quot;payload&quot;:{&quot;link_location&quot;:&quot;user_dropdown&quot;,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp&quot;,&quot;user_id&quot;:49082234}}"
-    data-hydro-click-hmac="3663a515f00481ee89daf87b7b3c3b52be366611663463d75a0b629c6430b210"
+    data-feature-preview-close-details="{&quot;event_type&quot;:&quot;feature_preview.clicks.close_modal&quot;,&quot;payload&quot;:{&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp&quot;,&quot;user_id&quot;:49082234}}"
+    data-feature-preview-close-hmac="27edca1fabcc6a40d6fdb0bfe50ec3c6e524b55d74e48d64e30d771060b4aa42"
+    data-hydro-click="{&quot;event_type&quot;:&quot;feature_preview.clicks.open_modal&quot;,&quot;payload&quot;:{&quot;link_location&quot;:&quot;user_dropdown&quot;,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp&quot;,&quot;user_id&quot;:49082234}}"
+    data-hydro-click-hmac="9a1d90d8e17bbbeb6fe56d2888d462a3fb88407f60078ff9629f25e66a475dfb"
   >
     Feature preview
   </button>
@@ -631,12 +631,12 @@
 
     <a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
     <a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="wBfdthB3A8rGH8A8uOlcnic0fIA2b38p+HVN9+cszn0bti7EVXXeha3RRCPnsQYLP4+kQwbus058rWDclBIcZQ==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="VWBeB4pFVq8uXkKVHEK+5rjzTc4AalN69/umbRfuiHOOwa11z0eL4EWQxopDGuRzoEiVDTDrnx1zI4tGZNBaaw==" />
       
       <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
         Sign out
       </button>
-      <input type="text" name="required_field_81a0" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1581727843348" class="form-control" /><input type="hidden" name="timestamp_secret" value="0fb0eb508faad18b1a6cbf75a048152daec4ed697dc78944588dd870485e992b" class="form-control" />
+      <input type="text" name="required_field_95f2" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1581727853442" class="form-control" /><input type="hidden" name="timestamp_secret" value="bad3bf34b795f60e16eabf4f712fda35a49b9c6bfe2a97cc30d7a7f11c3deb8e" class="form-control" />
 </form>  </details-menu>
 </details>
 
@@ -707,10 +707,10 @@
 
   <li>
     
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="QQhXVuB2ej9DSypvVCdeIPdTbcyhWNGPg0FoOuOxKCo1WU6+p5WX16XYx1DUPj1OZklSMtSBIvlCZwgnBwhUMg==" />      <input type="hidden" name="repository_id" value="236722508">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="S/V5OqWMVp3ocYB62sL5dYIlJ+PecLx8A90phUeDXUk/pGDS4m+7dQ7ibUVa25obEz8YHaupTwrC+0mYozohUQ==" />      <input type="hidden" name="repository_id" value="236722508">
 
       <details class="details-reset details-overlay select-menu float-left">
-        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:236722508,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp&quot;,&quot;user_id&quot;:49082234}}" data-hydro-click-hmac="a7ecd653c7ca52fa8842aa13d8ed5a79b2d6465fa6f3868729609fe5509e9b97" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
+        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:236722508,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp&quot;,&quot;user_id&quot;:49082234}}" data-hydro-click-hmac="2253ba66269f1d500e95145d3ee08a119df04c6960e21abadb5d581685bd5efa" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
               <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
               Unwatch
           </span>
@@ -781,9 +781,9 @@
 
   <li>
       <div class="js-toggler-container js-social-container starring-container ">
-    <form class="starred js-social-form" action="/danperks/The-Pagoda/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="KOWSPoEm90FgW8C9jQsCcDorvS8rCJB3h5SkABnFgAXUrn3o6KWaBu3tVh44wf9xASotGUg0W44cBIzjELJBEQ==" />
+    <form class="starred js-social-form" action="/danperks/The-Pagoda/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="xEEAk8lu1yHZQ28ugsHhZ9UQ1uGFvmF60mKcOWroV7Q4Cu9FoO26ZlT1+Y03Cxxm7hFG1+aCqoNJ8rTaY5+WoA==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar danperks/The-Pagoda" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:236722508,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp&quot;,&quot;user_id&quot;:49082234}}" data-hydro-click-hmac="3942578cced5893e95f2db769c0bd9ed2bf6e1c0df79178837df73446e94493e" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg aria-label="star" height="16" class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar danperks/The-Pagoda" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:236722508,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp&quot;,&quot;user_id&quot;:49082234}}" data-hydro-click-hmac="7bdfbcdc0d770b4d4951944f855d44b2eebfd75233f01dd5acd550bd10d062cd" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg aria-label="star" height="16" class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
 
         Unstar
 </button>        <a class="social-count js-social-count" href="/danperks/The-Pagoda/stargazers"
@@ -791,9 +791,9 @@
            1
         </a>
 </form>
-    <form class="unstarred js-social-form" action="/danperks/The-Pagoda/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="pQy4XvFnAdXoG0V3lHnPAZRW911T/qjnyMmxLx3TV6nKR2avnfaCvHWgOYkQQBtnRJ4wJGEGjLIjIMFgt3PYug==" />
+    <form class="unstarred js-social-form" action="/danperks/The-Pagoda/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="56Gd9gRhL10zMfSEkn0+wSjP9nfz2NQLgO3xO0s7HZqI6kMHaPCsNK6KiHoWROqn+AcxDsEg8F5rBIF04ZuSiQ==" />
       <input type="hidden" name="context" value="repository"></input>
-      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star danperks/The-Pagoda" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:236722508,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp&quot;,&quot;user_id&quot;:49082234}}" data-hydro-click-hmac="e75a4d5e36fe2b998280a6ced73bc5fdc64381ecdd793c6ef41df14468b8ae27" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg aria-label="star" height="16" class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star danperks/The-Pagoda" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:236722508,&quot;originating_url&quot;:&quot;https://github.com/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp&quot;,&quot;user_id&quot;:49082234}}" data-hydro-click-hmac="5eef2d8bb9529251b1b9ac21f7e080cc78db26eb9dda1dcd5c29bb23b1636942" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg aria-label="star" height="16" class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
 
         Star
 </button>        <a class="social-count js-social-count" href="/danperks/The-Pagoda/stargazers"
@@ -952,9 +952,9 @@
   
 
 
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/danperks/The-Pagoda/blob/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v21:b620b7f65991f9410510b12d98f2ae88 -->
+    <!-- blob contrib key: blob_contributors:v21:5cd2fe3598c892152663185a694f1e77 -->
       
 
     <div class="d-flex flex-items-start flex-shrink-0 flex-column flex-md-row pb-3">
@@ -969,7 +969,7 @@
     <span class="dropdown-caret"></span>
   </summary>
 
-  <details-menu class="SelectMenu SelectMenu--hasFilter" src="/danperks/The-Pagoda/refs/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C++/server.cpp?source_action=show&amp;source_controller=blob" preload>
+  <details-menu class="SelectMenu SelectMenu--hasFilter" src="/danperks/The-Pagoda/refs/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C++/original.cpp?source_action=show&amp;source_controller=blob" preload>
     <div class="SelectMenu-modal">
       <include-fragment class="SelectMenu-loading" aria-label="Menu is loading">
         <svg class="octicon octicon-octoface anim-pulse" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
@@ -985,13 +985,13 @@
                 data-hotkey="t">
             Find file
           </a>
-          <clipboard-copy value="Week 1 - Messaging System/C++/server.cpp" class="btn btn-sm BtnGroup-item">
+          <clipboard-copy value="Week 1 - Messaging System/C++/original.cpp" class="btn btn-sm BtnGroup-item">
             Copy path
           </clipboard-copy>
         </div>
       </span>
       <h2 id="blob-path" class="breadcrumb flex-auto min-width-0 text-normal flex-md-self-center ml-md-2 mr-md-3 my-2 my-md-0">
-        <span class="js-repo-root text-bold"><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/danperks/The-Pagoda/tree/d282e59d25733895366f917b471bac2719eaabae"><span>The-Pagoda</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/danperks/The-Pagoda/tree/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System"><span>Week 1 - Messaging System</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/danperks/The-Pagoda/tree/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B"><span>C++</span></a></span><span class="separator">/</span><strong class="final-path">server.cpp</strong>
+        <span class="js-repo-root text-bold"><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/danperks/The-Pagoda/tree/d282e59d25733895366f917b471bac2719eaabae"><span>The-Pagoda</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/danperks/The-Pagoda/tree/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System"><span>Week 1 - Messaging System</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/danperks/The-Pagoda/tree/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B"><span>C++</span></a></span><span class="separator">/</span><strong class="final-path">original.cpp</strong>
       </h2>
 
       <div class="BtnGroup flex-shrink-0 d-none d-md-inline-block">
@@ -1001,7 +1001,7 @@
               data-hotkey="t">
           Find file
         </a>
-        <clipboard-copy value="Week 1 - Messaging System/C++/server.cpp" class="btn btn-sm BtnGroup-item">
+        <clipboard-copy value="Week 1 - Messaging System/C++/original.cpp" class="btn btn-sm BtnGroup-item">
           Copy path
         </clipboard-copy>
       </div>
@@ -1011,7 +1011,7 @@
 
 
 
-    <include-fragment src="/danperks/The-Pagoda/contributors/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C++/server.cpp" class="Box Box--condensed commit-loader">
+    <include-fragment src="/danperks/The-Pagoda/contributors/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C++/original.cpp" class="Box Box--condensed commit-loader">
       <div class="Box-body bg-blue-light f6">
         Fetching contributors&hellip;
       </div>
@@ -1031,17 +1031,17 @@
 <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
 
-      138 lines (114 sloc)
+      123 lines (100 sloc)
       <span class="file-info-divider"></span>
-    3.75 KB
+    3.27 KB
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/danperks/The-Pagoda/raw/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/danperks/The-Pagoda/blame/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/danperks/The-Pagoda/commits/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/danperks/The-Pagoda/raw/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/danperks/The-Pagoda/blame/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/danperks/The-Pagoda/commits/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp">History</a>
     </div>
 
 
@@ -1074,7 +1074,7 @@
 <table class="highlight tab-size js-file-line-container" data-tab-size="8">
       <tr>
         <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="LC1" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">undef</span> UNICODE</td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">define</span> <span class="pl-en">WIN32_LEAN_AND_MEAN</span></td>
       </tr>
       <tr>
         <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
@@ -1083,183 +1083,182 @@
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">define</span> <span class="pl-en">WIN32_LEAN_AND_MEAN</span></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>winsock2.h<span class="pl-pds">&gt;</span></span></td>
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">define</span> <span class="pl-en">_WIN32_WINNT</span> <span class="pl-c1">0x501</span> <span class="pl-c"><span class="pl-c">//</span> needs -lws2_32 in g++ compile statement</span></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>windows.h<span class="pl-pds">&gt;</span></span></td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>ws2tcpip.h<span class="pl-pds">&gt;</span></span></td>
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>winsock2.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>stdlib.h<span class="pl-pds">&gt;</span></span></td>
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>windows.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>stdio.h<span class="pl-pds">&gt;</span></span></td>
       </tr>
       <tr>
         <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>ws2tcpip.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>stdlib.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>stdio.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> Need to link with Ws2_32.lib, Mswsock.lib, and Advapi32.lib</span></td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">pragma</span> comment (lib, &quot;Ws2_32.lib&quot;)</td>
       </tr>
       <tr>
         <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> Need to link with Ws2_32.lib</span></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
-        <td id="LC13" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">pragma</span> comment (lib, &quot;Ws2_32.lib&quot;)</td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> #pragma comment (lib, &quot;Mswsock.lib&quot;)</span></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">define</span> <span class="pl-en">DEFAULT_BUFLEN</span> <span class="pl-c1">512</span></td>
       </tr>
       <tr>
         <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">define</span> <span class="pl-en">DEFAULT_PORT</span> <span class="pl-s"><span class="pl-pds">&quot;</span>27015<span class="pl-pds">&quot;</span></span></td>
       </tr>
       <tr>
         <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">define</span> <span class="pl-en">DEFAULT_BUFLEN</span> <span class="pl-c1">1024</span></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
-        <td id="LC17" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">define</span> <span class="pl-en">DEFAULT_PORT</span> <span class="pl-s"><span class="pl-pds">&quot;</span>27015<span class="pl-pds">&quot;</span></span></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-k">int</span> __cdecl <span class="pl-en">main</span>(<span class="pl-k">int</span> argc, <span class="pl-k">char</span> **argv) </td>
       </tr>
       <tr>
         <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">{</td>
       </tr>
       <tr>
         <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
-        <td id="LC19" class="blob-code blob-code-inner js-file-line"><span class="pl-k">int</span> __cdecl <span class="pl-en">main</span>(<span class="pl-k">void</span>) </td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">    WSADATA wsaData;</td>
       </tr>
       <tr>
         <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code blob-code-inner js-file-line">{</td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">    SOCKET ConnectSocket = INVALID_SOCKET;</td>
       </tr>
       <tr>
         <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code blob-code-inner js-file-line">    WSADATA wsaData;</td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">struct</span> <span class="pl-en">addrinfo</span> *result = <span class="pl-c1">NULL</span>,</td>
       </tr>
       <tr>
         <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">int</span> iResult;</td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">                    *ptr = <span class="pl-c1">NULL</span>,</td>
       </tr>
       <tr>
         <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
-        <td id="LC23" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">                    hints;</td>
       </tr>
       <tr>
         <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code blob-code-inner js-file-line">    SOCKET ListenSocket = INVALID_SOCKET;</td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-k">char</span> *sendbuf = <span class="pl-s"><span class="pl-pds">&quot;</span>this is a test<span class="pl-pds">&quot;</span></span>;</td>
       </tr>
       <tr>
         <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
-        <td id="LC25" class="blob-code blob-code-inner js-file-line">    SOCKET ClientSocket = INVALID_SOCKET;</td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">char</span> recvbuf[DEFAULT_BUFLEN];</td>
       </tr>
       <tr>
         <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
-        <td id="LC26" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">int</span> iResult;</td>
       </tr>
       <tr>
         <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">struct</span> <span class="pl-en">addrinfo</span> * result = <span class="pl-c1">NULL</span>;</td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">int</span> recvbuflen = DEFAULT_BUFLEN;</td>
       </tr>
       <tr>
         <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">struct</span> <span class="pl-en">addrinfo</span> hints;</td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">    </td>
       </tr>
       <tr>
         <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
-        <td id="LC29" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Validate the parameters</span></td>
       </tr>
       <tr>
         <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
-        <td id="LC30" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">int</span> iSendResult;</td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (argc != <span class="pl-c1">2</span>) {</td>
       </tr>
       <tr>
         <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
-        <td id="LC31" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">char</span> recvbuf[DEFAULT_BUFLEN];</td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>usage: %s server-name<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, argv[<span class="pl-c1">0</span>]);</td>
       </tr>
       <tr>
         <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
-        <td id="LC32" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">int</span> recvbuflen = DEFAULT_BUFLEN;</td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
       </tr>
       <tr>
         <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
-        <td id="LC33" class="blob-code blob-code-inner js-file-line">    </td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
-        <td id="LC34" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Initialize Winsock</span></td>
-      </tr>
-      <tr>
-        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
-        <td id="LC35" class="blob-code blob-code-inner js-file-line">    iResult = <span class="pl-c1">WSAStartup</span>(<span class="pl-c1">MAKEWORD</span>(<span class="pl-c1">2</span>,<span class="pl-c1">2</span>), &amp;wsaData);</td>
-      </tr>
-      <tr>
-        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
-        <td id="LC36" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (iResult != <span class="pl-c1">0</span>) {</td>
-      </tr>
-      <tr>
-        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
-        <td id="LC37" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>WSAStartup failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, iResult);</td>
-      </tr>
-      <tr>
-        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
-        <td id="LC38" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
-      </tr>
-      <tr>
-        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
-        <td id="LC39" class="blob-code blob-code-inner js-file-line">    }</td>
-      </tr>
-      <tr>
-        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
-        <td id="LC40" class="blob-code blob-code-inner js-file-line">
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">
 </td>
       </tr>
       <tr>
+        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Initialize Winsock</span></td>
+      </tr>
+      <tr>
+        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line">    iResult = <span class="pl-c1">WSAStartup</span>(<span class="pl-c1">MAKEWORD</span>(<span class="pl-c1">2</span>,<span class="pl-c1">2</span>), &amp;wsaData);</td>
+      </tr>
+      <tr>
+        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (iResult != <span class="pl-c1">0</span>) {</td>
+      </tr>
+      <tr>
+        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>WSAStartup failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, iResult);</td>
+      </tr>
+      <tr>
+        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
+      </tr>
+      <tr>
+        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line">    }</td>
+      </tr>
+      <tr>
         <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
-        <td id="LC41" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">ZeroMemory</span>(&amp;hints, <span class="pl-k">sizeof</span>(hints));</td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
-        <td id="LC42" class="blob-code blob-code-inner js-file-line">    hints.<span class="pl-smi">ai_family</span> = AF_INET;</td>
+        <td id="LC42" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">ZeroMemory</span>( &amp;hints, <span class="pl-k">sizeof</span>(hints) );</td>
       </tr>
       <tr>
         <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
-        <td id="LC43" class="blob-code blob-code-inner js-file-line">    hints.<span class="pl-smi">ai_socktype</span> = SOCK_STREAM;</td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line">    hints.<span class="pl-smi">ai_family</span> = AF_UNSPEC;</td>
       </tr>
       <tr>
         <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
-        <td id="LC44" class="blob-code blob-code-inner js-file-line">    hints.<span class="pl-smi">ai_protocol</span> = IPPROTO_TCP;</td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line">    hints.<span class="pl-smi">ai_socktype</span> = SOCK_STREAM;</td>
       </tr>
       <tr>
         <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
-        <td id="LC45" class="blob-code blob-code-inner js-file-line">    hints.<span class="pl-smi">ai_flags</span> = AI_PASSIVE;</td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line">    hints.<span class="pl-smi">ai_protocol</span> = IPPROTO_TCP;</td>
       </tr>
       <tr>
         <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
@@ -1272,7 +1271,7 @@
       </tr>
       <tr>
         <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
-        <td id="LC48" class="blob-code blob-code-inner js-file-line">    iResult = <span class="pl-c1">getaddrinfo</span>(<span class="pl-c1">NULL</span>, DEFAULT_PORT, &amp;hints, &amp;result);</td>
+        <td id="LC48" class="blob-code blob-code-inner js-file-line">    iResult = <span class="pl-c1">getaddrinfo</span>(argv[<span class="pl-c1">1</span>], DEFAULT_PORT, &amp;hints, &amp;result);</td>
       </tr>
       <tr>
         <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
@@ -1301,168 +1300,169 @@
       </tr>
       <tr>
         <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
-        <td id="LC55" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Create a SOCKET for connecting to server</span></td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Attempt to connect to an address until one succeeds</span></td>
       </tr>
       <tr>
         <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
-        <td id="LC56" class="blob-code blob-code-inner js-file-line">    ListenSocket = <span class="pl-c1">socket</span>(result-&gt;<span class="pl-smi">ai_family</span>, result-&gt;<span class="pl-smi">ai_socktype</span>, result-&gt;<span class="pl-smi">ai_protocol</span>);</td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span>(ptr=result; ptr != <span class="pl-c1">NULL</span> ;ptr=ptr-&gt;<span class="pl-smi">ai_next</span>) {</td>
       </tr>
       <tr>
         <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
-        <td id="LC57" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (ListenSocket == INVALID_SOCKET) {</td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
-        <td id="LC58" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>socket failed with error: %ld<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">//</span> Create a SOCKET for connecting to server</span></td>
       </tr>
       <tr>
         <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
-        <td id="LC59" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">freeaddrinfo</span>(result);</td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line">        ConnectSocket = <span class="pl-c1">socket</span>(ptr-&gt;<span class="pl-smi">ai_family</span>, ptr-&gt;<span class="pl-smi">ai_socktype</span>, </td>
       </tr>
       <tr>
         <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
-        <td id="LC60" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">WSACleanup</span>();</td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line">            ptr-&gt;<span class="pl-smi">ai_protocol</span>);</td>
       </tr>
       <tr>
         <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
-        <td id="LC61" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
+        <td id="LC61" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> (ConnectSocket == INVALID_SOCKET) {</td>
       </tr>
       <tr>
         <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
-        <td id="LC62" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC62" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>socket failed with error: %ld<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
       </tr>
       <tr>
         <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
-        <td id="LC63" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC63" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">WSACleanup</span>();</td>
       </tr>
       <tr>
         <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
-        <td id="LC64" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Setup the TCP listening socket</span></td>
+        <td id="LC64" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
       </tr>
       <tr>
         <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
-        <td id="LC65" class="blob-code blob-code-inner js-file-line">    iResult = <span class="pl-c1">bind</span>( ListenSocket, result-&gt;<span class="pl-smi">ai_addr</span>, (<span class="pl-k">int</span>)result-&gt;<span class="pl-smi">ai_addrlen</span>);</td>
+        <td id="LC65" class="blob-code blob-code-inner js-file-line">        }</td>
       </tr>
       <tr>
         <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
-        <td id="LC66" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (iResult == SOCKET_ERROR) {</td>
+        <td id="LC66" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
-        <td id="LC67" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>bind failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
+        <td id="LC67" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">//</span> Connect to server.</span></td>
       </tr>
       <tr>
         <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
-        <td id="LC68" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">freeaddrinfo</span>(result);</td>
+        <td id="LC68" class="blob-code blob-code-inner js-file-line">        iResult = <span class="pl-c1">connect</span>( ConnectSocket, ptr-&gt;<span class="pl-smi">ai_addr</span>, (<span class="pl-k">int</span>)ptr-&gt;<span class="pl-smi">ai_addrlen</span>);</td>
       </tr>
       <tr>
         <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
-        <td id="LC69" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">closesocket</span>(ListenSocket);</td>
+        <td id="LC69" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> (iResult == SOCKET_ERROR) {</td>
       </tr>
       <tr>
         <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
-        <td id="LC70" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">WSACleanup</span>();</td>
+        <td id="LC70" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">closesocket</span>(ConnectSocket);</td>
       </tr>
       <tr>
         <td id="L71" class="blob-num js-line-number" data-line-number="71"></td>
-        <td id="LC71" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
+        <td id="LC71" class="blob-code blob-code-inner js-file-line">            ConnectSocket = INVALID_SOCKET;</td>
       </tr>
       <tr>
         <td id="L72" class="blob-num js-line-number" data-line-number="72"></td>
-        <td id="LC72" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC72" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">continue</span>;</td>
       </tr>
       <tr>
         <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
-        <td id="LC73" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC73" class="blob-code blob-code-inner js-file-line">        }</td>
       </tr>
       <tr>
         <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
-        <td id="LC74" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">freeaddrinfo</span>(result);</td>
+        <td id="LC74" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">break</span>;</td>
       </tr>
       <tr>
         <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
-        <td id="LC75" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC75" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
-        <td id="LC76" class="blob-code blob-code-inner js-file-line">    iResult = <span class="pl-c1">listen</span>(ListenSocket, SOMAXCONN);</td>
+        <td id="LC76" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
-        <td id="LC77" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (iResult == SOCKET_ERROR) {</td>
+        <td id="LC77" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">freeaddrinfo</span>(result);</td>
       </tr>
       <tr>
         <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
-        <td id="LC78" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>listen failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
+        <td id="LC78" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L79" class="blob-num js-line-number" data-line-number="79"></td>
-        <td id="LC79" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">closesocket</span>(ListenSocket);</td>
+        <td id="LC79" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (ConnectSocket == INVALID_SOCKET) {</td>
       </tr>
       <tr>
         <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
-        <td id="LC80" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">WSACleanup</span>();</td>
+        <td id="LC80" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Unable to connect to server!<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>);</td>
       </tr>
       <tr>
         <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
-        <td id="LC81" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
+        <td id="LC81" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">WSACleanup</span>();</td>
       </tr>
       <tr>
         <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
-        <td id="LC82" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC82" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
       </tr>
       <tr>
         <td id="L83" class="blob-num js-line-number" data-line-number="83"></td>
-        <td id="LC83" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC83" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L84" class="blob-num js-line-number" data-line-number="84"></td>
-        <td id="LC84" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Accept a client socket</span></td>
-      </tr>
-      <tr>
-        <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
-        <td id="LC85" class="blob-code blob-code-inner js-file-line">    ClientSocket = <span class="pl-c1">accept</span>(ListenSocket, <span class="pl-c1">NULL</span>, <span class="pl-c1">NULL</span>);</td>
-      </tr>
-      <tr>
-        <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
-        <td id="LC86" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (ClientSocket == INVALID_SOCKET) {</td>
-      </tr>
-      <tr>
-        <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
-        <td id="LC87" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>accept failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
-      </tr>
-      <tr>
-        <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
-        <td id="LC88" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">closesocket</span>(ListenSocket);</td>
-      </tr>
-      <tr>
-        <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
-        <td id="LC89" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">WSACleanup</span>();</td>
-      </tr>
-      <tr>
-        <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
-        <td id="LC90" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
-      </tr>
-      <tr>
-        <td id="L91" class="blob-num js-line-number" data-line-number="91"></td>
-        <td id="LC91" class="blob-code blob-code-inner js-file-line">    }</td>
-      </tr>
-      <tr>
-        <td id="L92" class="blob-num js-line-number" data-line-number="92"></td>
-        <td id="LC92" class="blob-code blob-code-inner js-file-line">
+        <td id="LC84" class="blob-code blob-code-inner js-file-line">
 </td>
       </tr>
       <tr>
+        <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
+        <td id="LC85" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Send an initial buffer</span></td>
+      </tr>
+      <tr>
+        <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
+        <td id="LC86" class="blob-code blob-code-inner js-file-line">    iResult = <span class="pl-c1">send</span>( ConnectSocket, sendbuf, (<span class="pl-k">int</span>)<span class="pl-c1">strlen</span>(sendbuf), <span class="pl-c1">0</span> );</td>
+      </tr>
+      <tr>
+        <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
+        <td id="LC87" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (iResult == SOCKET_ERROR) {</td>
+      </tr>
+      <tr>
+        <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
+        <td id="LC88" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>send failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
+      </tr>
+      <tr>
+        <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
+        <td id="LC89" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">closesocket</span>(ConnectSocket);</td>
+      </tr>
+      <tr>
+        <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
+        <td id="LC90" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">WSACleanup</span>();</td>
+      </tr>
+      <tr>
+        <td id="L91" class="blob-num js-line-number" data-line-number="91"></td>
+        <td id="LC91" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
+      </tr>
+      <tr>
+        <td id="L92" class="blob-num js-line-number" data-line-number="92"></td>
+        <td id="LC92" class="blob-code blob-code-inner js-file-line">    }</td>
+      </tr>
+      <tr>
         <td id="L93" class="blob-num js-line-number" data-line-number="93"></td>
-        <td id="LC93" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> No longer need server socket</span></td>
+        <td id="LC93" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L94" class="blob-num js-line-number" data-line-number="94"></td>
-        <td id="LC94" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">closesocket</span>(ListenSocket);</td>
+        <td id="LC94" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Bytes Sent: %ld<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, iResult);</td>
       </tr>
       <tr>
         <td id="L95" class="blob-num js-line-number" data-line-number="95"></td>
@@ -1471,105 +1471,107 @@
       </tr>
       <tr>
         <td id="L96" class="blob-num js-line-number" data-line-number="96"></td>
-        <td id="LC96" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Receive until the peer shuts down the connection</span></td>
+        <td id="LC96" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> shutdown the connection since no more data will be sent</span></td>
       </tr>
       <tr>
         <td id="L97" class="blob-num js-line-number" data-line-number="97"></td>
-        <td id="LC97" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">do</span> {</td>
+        <td id="LC97" class="blob-code blob-code-inner js-file-line">    iResult = <span class="pl-c1">shutdown</span>(ConnectSocket, SD_SEND);</td>
       </tr>
       <tr>
         <td id="L98" class="blob-num js-line-number" data-line-number="98"></td>
-        <td id="LC98" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC98" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (iResult == SOCKET_ERROR) {</td>
       </tr>
       <tr>
         <td id="L99" class="blob-num js-line-number" data-line-number="99"></td>
-        <td id="LC99" class="blob-code blob-code-inner js-file-line">        iResult = <span class="pl-c1">recv</span>(ClientSocket, recvbuf, recvbuflen, <span class="pl-c1">0</span>);</td>
+        <td id="LC99" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>shutdown failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
       </tr>
       <tr>
         <td id="L100" class="blob-num js-line-number" data-line-number="100"></td>
-        <td id="LC100" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> (iResult &gt; <span class="pl-c1">0</span>) {</td>
+        <td id="LC100" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">closesocket</span>(ConnectSocket);</td>
       </tr>
       <tr>
         <td id="L101" class="blob-num js-line-number" data-line-number="101"></td>
-        <td id="LC101" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Bytes received: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, iResult);</td>
+        <td id="LC101" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">WSACleanup</span>();</td>
       </tr>
       <tr>
         <td id="L102" class="blob-num js-line-number" data-line-number="102"></td>
-        <td id="LC102" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC102" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
       </tr>
       <tr>
         <td id="L103" class="blob-num js-line-number" data-line-number="103"></td>
-        <td id="LC103" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">//</span> Echo the buffer back to the sender</span></td>
+        <td id="LC103" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L104" class="blob-num js-line-number" data-line-number="104"></td>
-        <td id="LC104" class="blob-code blob-code-inner js-file-line">            iSendResult = <span class="pl-c1">send</span>( ClientSocket, recvbuf, iResult, <span class="pl-c1">0</span> );</td>
+        <td id="LC104" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L105" class="blob-num js-line-number" data-line-number="105"></td>
-        <td id="LC105" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">if</span> (iSendResult == SOCKET_ERROR) {</td>
+        <td id="LC105" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Receive until the peer closes the connection</span></td>
       </tr>
       <tr>
         <td id="L106" class="blob-num js-line-number" data-line-number="106"></td>
-        <td id="LC106" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>send failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
+        <td id="LC106" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">do</span> {</td>
       </tr>
       <tr>
         <td id="L107" class="blob-num js-line-number" data-line-number="107"></td>
-        <td id="LC107" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">closesocket</span>(ClientSocket);</td>
+        <td id="LC107" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L108" class="blob-num js-line-number" data-line-number="108"></td>
-        <td id="LC108" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">WSACleanup</span>();</td>
+        <td id="LC108" class="blob-code blob-code-inner js-file-line">        iResult = <span class="pl-c1">recv</span>(ConnectSocket, recvbuf, recvbuflen, <span class="pl-c1">0</span>);</td>
       </tr>
       <tr>
         <td id="L109" class="blob-num js-line-number" data-line-number="109"></td>
-        <td id="LC109" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
+        <td id="LC109" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> ( iResult &gt; <span class="pl-c1">0</span> )</td>
       </tr>
       <tr>
         <td id="L110" class="blob-num js-line-number" data-line-number="110"></td>
-        <td id="LC110" class="blob-code blob-code-inner js-file-line">            }</td>
+        <td id="LC110" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Bytes received: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, iResult);</td>
       </tr>
       <tr>
         <td id="L111" class="blob-num js-line-number" data-line-number="111"></td>
-        <td id="LC111" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Bytes sent: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, iSendResult);</td>
+        <td id="LC111" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">else</span> <span class="pl-k">if</span> ( iResult == <span class="pl-c1">0</span> )</td>
       </tr>
       <tr>
         <td id="L112" class="blob-num js-line-number" data-line-number="112"></td>
-        <td id="LC112" class="blob-code blob-code-inner js-file-line">        }</td>
+        <td id="LC112" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Connection closed<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>);</td>
       </tr>
       <tr>
         <td id="L113" class="blob-num js-line-number" data-line-number="113"></td>
-        <td id="LC113" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">else</span> <span class="pl-k">if</span> (iResult == <span class="pl-c1">0</span>)</td>
+        <td id="LC113" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">else</span></td>
       </tr>
       <tr>
         <td id="L114" class="blob-num js-line-number" data-line-number="114"></td>
-        <td id="LC114" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Connection closing...<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>);</td>
+        <td id="LC114" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>recv failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
       </tr>
       <tr>
         <td id="L115" class="blob-num js-line-number" data-line-number="115"></td>
-        <td id="LC115" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">else</span>  {</td>
+        <td id="LC115" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L116" class="blob-num js-line-number" data-line-number="116"></td>
-        <td id="LC116" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>recv failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
+        <td id="LC116" class="blob-code blob-code-inner js-file-line">    } <span class="pl-k">while</span>( iResult &gt; <span class="pl-c1">0</span> );</td>
       </tr>
       <tr>
         <td id="L117" class="blob-num js-line-number" data-line-number="117"></td>
-        <td id="LC117" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">closesocket</span>(ClientSocket);</td>
+        <td id="LC117" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L118" class="blob-num js-line-number" data-line-number="118"></td>
-        <td id="LC118" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">WSACleanup</span>();</td>
+        <td id="LC118" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> cleanup</span></td>
       </tr>
       <tr>
         <td id="L119" class="blob-num js-line-number" data-line-number="119"></td>
-        <td id="LC119" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
+        <td id="LC119" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">closesocket</span>(ConnectSocket);</td>
       </tr>
       <tr>
         <td id="L120" class="blob-num js-line-number" data-line-number="120"></td>
-        <td id="LC120" class="blob-code blob-code-inner js-file-line">        }</td>
+        <td id="LC120" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">WSACleanup</span>();</td>
       </tr>
       <tr>
         <td id="L121" class="blob-num js-line-number" data-line-number="121"></td>
@@ -1578,74 +1580,11 @@
       </tr>
       <tr>
         <td id="L122" class="blob-num js-line-number" data-line-number="122"></td>
-        <td id="LC122" class="blob-code blob-code-inner js-file-line">    } <span class="pl-k">while</span> (iResult &gt; <span class="pl-c1">0</span>);</td>
+        <td id="LC122" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> <span class="pl-c1">0</span>;</td>
       </tr>
       <tr>
         <td id="L123" class="blob-num js-line-number" data-line-number="123"></td>
-        <td id="LC123" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L124" class="blob-num js-line-number" data-line-number="124"></td>
-        <td id="LC124" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> shutdown the connection since we&#39;re done</span></td>
-      </tr>
-      <tr>
-        <td id="L125" class="blob-num js-line-number" data-line-number="125"></td>
-        <td id="LC125" class="blob-code blob-code-inner js-file-line">    iResult = <span class="pl-c1">shutdown</span>(ClientSocket, SD_SEND);</td>
-      </tr>
-      <tr>
-        <td id="L126" class="blob-num js-line-number" data-line-number="126"></td>
-        <td id="LC126" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (iResult == SOCKET_ERROR) {</td>
-      </tr>
-      <tr>
-        <td id="L127" class="blob-num js-line-number" data-line-number="127"></td>
-        <td id="LC127" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>shutdown failed with error: %d<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">WSAGetLastError</span>());</td>
-      </tr>
-      <tr>
-        <td id="L128" class="blob-num js-line-number" data-line-number="128"></td>
-        <td id="LC128" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">closesocket</span>(ClientSocket);</td>
-      </tr>
-      <tr>
-        <td id="L129" class="blob-num js-line-number" data-line-number="129"></td>
-        <td id="LC129" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">WSACleanup</span>();</td>
-      </tr>
-      <tr>
-        <td id="L130" class="blob-num js-line-number" data-line-number="130"></td>
-        <td id="LC130" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">return</span> <span class="pl-c1">1</span>;</td>
-      </tr>
-      <tr>
-        <td id="L131" class="blob-num js-line-number" data-line-number="131"></td>
-        <td id="LC131" class="blob-code blob-code-inner js-file-line">    }</td>
-      </tr>
-      <tr>
-        <td id="L132" class="blob-num js-line-number" data-line-number="132"></td>
-        <td id="LC132" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L133" class="blob-num js-line-number" data-line-number="133"></td>
-        <td id="LC133" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> cleanup</span></td>
-      </tr>
-      <tr>
-        <td id="L134" class="blob-num js-line-number" data-line-number="134"></td>
-        <td id="LC134" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">closesocket</span>(ClientSocket);</td>
-      </tr>
-      <tr>
-        <td id="L135" class="blob-num js-line-number" data-line-number="135"></td>
-        <td id="LC135" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">WSACleanup</span>();</td>
-      </tr>
-      <tr>
-        <td id="L136" class="blob-num js-line-number" data-line-number="136"></td>
-        <td id="LC136" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L137" class="blob-num js-line-number" data-line-number="137"></td>
-        <td id="LC137" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> <span class="pl-c1">0</span>;</td>
-      </tr>
-      <tr>
-        <td id="L138" class="blob-num js-line-number" data-line-number="138"></td>
-        <td id="LC138" class="blob-code blob-code-inner js-file-line">}</td>
+        <td id="LC123" class="blob-code blob-code-inner js-file-line">}</td>
       </tr>
 </table>
 
@@ -1665,7 +1604,7 @@
             Copy permalink
           </clipboard-copy>
         </li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/danperks/The-Pagoda/blame/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/server.cpp">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/danperks/The-Pagoda/blame/d282e59d25733895366f917b471bac2719eaabae/Week%201%20-%20Messaging%20System/C%2B%2B/original.cpp">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/danperks/The-Pagoda/issues/new">Reference in new issue</a></li>
       </ul>
     </details-menu>
