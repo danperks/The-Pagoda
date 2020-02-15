@@ -31,3 +31,7 @@
 *.out
 *.app
 .vscode/c_cpp_properties.json
+
+# Git
+.vscode
+*.gitignore

@@ -9,10 +9,6 @@
 
 // needs -lws2_32 in g++ compile statement
 #define DEFAULT_PORT "27015"
-#pragma comment (lib, "Ws2_32.lib")
-//#pragma comment (lib, "Mswsock.lib")
-//#pragma comment (lib, "AdvApi32.lib")
-
 int main(int argc, char **argv) {
     // based of ms example
     std::cout<<"it ran"<<std::endl;
@@ -74,9 +70,4 @@ int main(int argc, char **argv) {
 
     closesocket(ourSocket);
     WSACleanup();
-
-    
-
-
-
 }
