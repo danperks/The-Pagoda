@@ -1,12 +1,15 @@
 #define WIN32_LEAN_AND_MEAN
 
+#include <iostream>
 #include <winsock2.h>
 #include <windows.h>
 #include <ws2tcpip.h>
 #include <stdlib.h>
 #include <stdio.h>
 
+using namespace std;
 
+// needs -lws2_32 in g++ compile statement
 // Need to link with Ws2_32.lib, Mswsock.lib, and Advapi32.lib
 #pragma comment (lib, "Ws2_32.lib")
 
@@ -21,7 +24,6 @@ int __cdecl main(int argc, char **argv)
     struct addrinfo *result = NULL,
                     *ptr = NULL,
                     hints;
-    const char *sendbuf = "this is a test";
     char recvbuf[DEFAULT_BUFLEN];
     int iResult;
     int recvbuflen = DEFAULT_BUFLEN;
@@ -83,7 +85,22 @@ int __cdecl main(int argc, char **argv)
     }
 
     // Send an initial buffer
-    iResult = send( ConnectSocket, sendbuf, (int)strlen(sendbuf), 0 );
+
+    cout << "Input:";
+
+    string toSend;
+    cin >> toSend;
+    //toSend.replace(toSend.begin(), toSend.end(), ' ', '_');
+    cout << endl;
+    int len = toSend.length();
+    char char_array[512]; // this is the character limit
+    strcpy(char_array, toSend.c_str());
+
+    char *toSendFinal = char_array;
+
+    //const char *toSendFinal = "this is my string for memes";
+
+    iResult = send( ConnectSocket, toSendFinal, (int)strlen(toSendFinal), 0 );
     if (iResult == SOCKET_ERROR) {
         printf("send failed with error: %d\n", WSAGetLastError());
         closesocket(ConnectSocket);
