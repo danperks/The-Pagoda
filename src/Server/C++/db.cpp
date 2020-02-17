@@ -1,44 +1,97 @@
-#include <cassert>
 #include <iostream>
+#include <pqxx/pqxx>
 
-#include <tao/pq.hpp>
+using namespace std;
+using namespace pqxx;
 
-int main()
-{
-  // Open connection
-  const auto conn = tao::pq::connection::create( "dbname=template1" );
+int main(){
+    connect()
+}
 
-  // Execute SQL statement
-  conn->execute( "DROP TABLE IF EXISTS taopq_example" );
-  conn->execute( "CREATE TABLE taopq_example ( a INTEGER PRIMARY KEY, b INTEGER, c TEXT NOT NULL )" );
+int connect(int argc, char* argv[]) {
+    try {
+        connection C("dbname = thepagoda user=postgres password = Mumdad45 \
+        hostaddr = localhost port = 5432");
+        if (C.is_open()){
+            cout << "Database has been opened:" << C.dbname() << endl;
+        } else{
+            cout << "Database can't be opened" << endl;
+            return 1;
+        }
+    } catch (const std::exception &e) {
+        cerr << e.what() << std::endl;
+        return 1;
+    }
+}
 
-  // Prepare statement
-  conn->prepare( "my_stmt", "INSERT INTO taopq_example VALUES ( $1, $2, $3 )" );
 
-  {
-    // Begin transaction
-    const auto tr = conn->transaction();
+int insertplayers(int argc, char* argv[]) {
+    char playerid;
+    int playertype;
+    char playeraddr;
+    int gametoken;
 
-    // Execute statement with parameters
-    tr->execute( "INSERT INTO taopq_example VALUES ( $1, $2, $3 )", 1, 42, "foo" );
+    cout << "playerid" << endl;
+    cin >> playerid;
+    cout << "playertype" << endl;
+    cin >> playertype;
+    cout << "playeraddr" << endl;
+    cin >> playeraddr;
+    cout << "gametoken" << endl;
+    cin >> gametoken;
 
-    // Execute previously prepared statement with parameters (recommended)
-    tr->execute( "my_stmt", 2, tao::pq::null, "Hello, world!" );
 
-    // Commit transaction
-    tr->commit();
-  }
+    sql = "INSERT INTO players (playerid, playertype, playeraddr, gametoken) " \
+          "VALUES (playerid, playertype, playeraddr, gametoken); "
+    work W(C);
 
-  // insert/update/delete statements return an object that contains the number of rows affected
-  {
-    const auto res = conn->execute( "insert", 3, 3, "drei" );
-    assert( res.rows_affected() == 1 );
-  }
+    W.exec(sql);
+    W.commit();
+    cout << "Player information has been added successfully" << endl;
+    C.disconnect();
+    }
 
-  // Queries return object with result set
-  const auto res = conn->execute( "SELECT * FROM taopq_example" );
-  assert( res.size() == 3 );
+int insertplayergroups(int argc, char* argv[]) {
+    char playergroup;
+    char playerid;
 
-  // Conveniently convert result into C++ container
-  const auto v = res.vector< std::tuple< int, std::optional< int >, std::string > >();
+    cout << "playerid" << endl;
+    cin >> playerid;
+    cout << playergroup << endl;
+    cin >> playergroup;
+
+    sql = "INSERT INTO playergroups (playergroup, playerid)" \
+          "VALUES (playergroup, playerid);"
+    work W(C);
+
+    W.exec(sql);
+    W.commit();
+    cout << "Player information has been added successfully" << endl;
+    C.disconnect();
+    }
+}
+
+int insertmessages(int argc, char* argv[]) {
+    int messagetoken;
+    int gametoken;
+    int playergroup;
+    int playerid;
+    char time;
+    char message;
+
+    cout << "messagetoken" << endl;
+    cin >> messagetoken;
+    cout << "gametoken" << endl;
+    cin >> gametoken;
+    cout << "playergroup" << endl;
+    cin >> playergroup;
+    cout << "playerid" << endl;
+    cin >> playerid;
+    cout << "time" << endl;
+    cin >> time;
+    cout << "message" << endl;
+    cin >> message;
+
+    
+
 }

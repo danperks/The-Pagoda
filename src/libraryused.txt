@@ -1,0 +1,1 @@
+multiple console windows : https://www.codeproject.com/Articles/13368/Multiple-consoles-for-a-single-application
