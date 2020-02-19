@@ -5,27 +5,17 @@ using namespace std;
 using namespace pqxx;
 
 int main(){
-    connect()
+    const connection C = connect();
 }
 
-int connect(int argc, char* argv[]) {
-    try {
-        connection C("dbname = thepagoda user=postgres password = Mumdad45 \
+connection connect() {
+    connection C("dbname = thepagoda user=postgres password = Mumdad45 \
         hostaddr = localhost port = 5432");
-        if (C.is_open()){
-            cout << "Database has been opened:" << C.dbname() << endl;
-        } else{
-            cout << "Database can't be opened" << endl;
-            return 1;
-        }
-    } catch (const std::exception &e) {
-        cerr << e.what() << std::endl;
-        return 1;
-    }
+    cout << "Database has been opened:" << C.dbname() << endl;
 }
 
 
-int insertplayers(int argc, char* argv[]) {
+int insertplayers(connection C) {
     char playerid;
     int playertype;
     char playeraddr;
@@ -41,8 +31,8 @@ int insertplayers(int argc, char* argv[]) {
     cin >> gametoken;
 
 
-    sql = "INSERT INTO players (playerid, playertype, playeraddr, gametoken) " \
-          "VALUES (playerid, playertype, playeraddr, gametoken); "
+    string sql = "INSERT INTO players (playerid, playertype, playeraddr, gametoken) " \
+          "VALUES (playerid, playertype, playeraddr, gametoken)";
     work W(C);
 
     W.exec(sql);
@@ -51,7 +41,7 @@ int insertplayers(int argc, char* argv[]) {
     C.disconnect();
     }
 
-int insertplayergroups(int argc, char* argv[]) {
+int insertplayergroups(connection C) {
     char playergroup;
     char playerid;
 
@@ -60,15 +50,13 @@ int insertplayergroups(int argc, char* argv[]) {
     cout << playergroup << endl;
     cin >> playergroup;
 
-    sql = "INSERT INTO playergroups (playergroup, playerid)" \
-          "VALUES (playergroup, playerid);"
+    string sql = "INSERT INTO playergroups (playergroup, playerid)" \
+          "VALUES (playergroup, playerid)";
     work W(C);
 
     W.exec(sql);
     W.commit();
     cout << "Player information has been added successfully" << endl;
-    C.disconnect();
-    }
 }
 
 int insertmessages(int argc, char* argv[]) {
@@ -91,7 +79,5 @@ int insertmessages(int argc, char* argv[]) {
     cin >> time;
     cout << "message" << endl;
     cin >> message;
-
-    
 
 }
