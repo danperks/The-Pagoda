@@ -14,4 +14,4 @@ To include libraries, install them with vcpkg and make sure to add `-L [vcpkg in
 
 ## Other Notes
 
-At the moment, the server and client need to be compiled with `-lws2_32` and `-std=c++0x` to get them to compile correctly.
+At the moment, the server and client need to be compiled with `-lws2_32 -std=c++0x` to get them to compile correctly.
