@@ -6,7 +6,7 @@ HOST = str(socket.gethostbyname(socket.gethostname()))
 PORT = 65432 
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((HOST, PORT))
+server.bind(("127.0.0.1", PORT))
 print("Server IP: ", HOST)
 server.listen()
 conn, addr = server.accept()
