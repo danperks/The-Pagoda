@@ -6,13 +6,8 @@
 #include <iostream>
 #include <string>
 #include <WS2tcpip.h>
-#include <conio.h>
-#include <vector>
-#include <ctype.h>
 
 using namespace std;
-
-// TODO Need to set the socket to non blocking
 
 int main()
 {
@@ -23,14 +18,14 @@ int main()
 	int wsResult = WSAStartup(MAKEWORD(2, 2), &data);
 	if (wsResult != 0)
 	{
-		cerr << "An error occured - Error Code #WSA" << wsResult << endl;
+		cerr << "Can't start Winsock, Err #" << wsResult << endl;
 		return 0;
 	}
 
 	SOCKET sock = socket(AF_INET, SOCK_STREAM, 0); // Create socket
 	if (sock == INVALID_SOCKET)
 	{
-		cerr << "An error occured - Error Code #WSB" << WSAGetLastError() << endl;
+		cerr << "Can't create socket, Err #" << WSAGetLastError() << endl;
 		WSACleanup();
 		return 0;
 	}
@@ -54,40 +49,30 @@ int main()
 	char buffer[4096];
 	string dataIn;
 
-	vector<string> toSend;
-	string letter = "";                    
-    string word = "";    
-	int letterCount = 0;
-
-	while(true)
+	do
 	{
-		toSend.clear();
-		letter = "";                    
-    	word = "";    
-		letterCount = 0;
+		// Prompt the user for some text
+		cout << "> ";
+		getline(cin, dataIn);
 
-		while(true){
-			if (_kbhit() ) {
-				int key_code = _getch();
-				string key = to_string(key_code);
-				if (key == "13"){
-					break;
-				}
-				printf("The character is %c\n", key);
-				toSend.push_back(key);
-			}
-			else {
+		if (dataIn.size() > 0)		// Make sure the user has typed in something
+		{
+			// Send the text
+			int sendResult = send(sock, dataIn.c_str(), dataIn.size() + 1, 0);
+			if (sendResult != SOCKET_ERROR)
+			{
+				// Wait for response
+				ZeroMemory(buffer, 4096);
 				int dataOut = recv(sock, buffer, 4096, 0);
 				if (dataOut > 0)
 				{
-					printf("SERVER> " + string(buffer, 0, dataOut));
+
+					cout << "SERVER> " << string(buffer, 0, dataOut) << endl;
 				}
 			}
 		}
-		
-		int sendResult = send(sock, dataIn.c_str(), dataIn.size() + 1, 0);
-	}
-
+	
+	} while (dataIn.size() > 0);
 
 	closesocket(sock);
 	WSACleanup();
