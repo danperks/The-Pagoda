@@ -2,12 +2,58 @@
 #define WINVER 0x0A00
 #define _WIN32_WINNT 0x0A00
 
-
+#include <windows.h>
 #include <iostream>
+#include <thread>
 #include <string>
 #include <WS2tcpip.h>
 
+
 using namespace std;
+
+int MessageRead(){
+	SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
+	char buffer[4096];
+	while (true){
+	ZeroMemory(buffer, 4096);
+	int dataOut = recv(sock, buffer, 4096, 0);
+	if (dataOut > 0){
+		cout << "SERVER> " << string(buffer, 0, dataOut) << endl;
+		return 1;
+		}
+
+	}
+	closesocket(sock);
+	WSACleanup();
+	return 0;
+}
+
+
+int MessageSend(){
+	SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
+	string dataIn;
+	while (true){	
+	cout << "> ";
+	getline(cin, dataIn);
+	if(dataIn.size()>0){
+		int sendResult = send(sock, dataIn.c_str(), dataIn.size() + 1, 0);
+			if (sendResult != SOCKET_ERROR){
+				// seppuku
+				closesocket(sock);
+				WSACleanup();	
+				return 1;		
+			}
+
+	}
+	
+
+	}
+	closesocket(sock);
+	WSACleanup();
+	return 0;
+}
+
+
 
 int main()
 {
@@ -44,36 +90,21 @@ int main()
 		WSACleanup();
 		return 0;
 	}
-
-	// Main Loop
-	char buffer[4096];
-	string dataIn;
-
-	do
-	{
-		// Prompt the user for some text
-		cout << "> ";
-		getline(cin, dataIn);
-
-		if (dataIn.size() > 0)		// Make sure the user has typed in something
-		{
-			// Send the text
-			int sendResult = send(sock, dataIn.c_str(), dataIn.size() + 1, 0);
-			if (sendResult != SOCKET_ERROR)
-			{
-				// Wait for response
-				ZeroMemory(buffer, 4096);
-				int dataOut = recv(sock, buffer, 4096, 0);
-				if (dataOut > 0)
-				{
-
-					cout << "SERVER> " << string(buffer, 0, dataOut) << endl;
-				}
-			}
-		}
 	
-	} while (dataIn.size() > 0);
-
+	// Main Loop	
+	//pthread_create (1,NULL,MessageSend, (SOCKET)sock);
+	//thread MessageRead (MessageRead,sock);
+	thread (MessageRead);
+	thread (MessageSend);
+	//Handle myHandle = CreateThread(0,0,MessageRead,0,0,0);
+	//MessageSend.join();
+	MessageRead.join();
+	MessageSend.join();
+	
 	closesocket(sock);
 	WSACleanup();
 }
+
+
+
+
