@@ -9,6 +9,8 @@
 #include <conio.h>
 #include <vector>
 #include <ctype.h>
+#include <windows.h>
+#include <process.h>
 
 using namespace std;
 
@@ -16,6 +18,7 @@ using namespace std;
 
 int main()
 {
+	//string PerksClient ="C:\\Users\\hpd12\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe";
 	string address = "127.0.0.1";		// IP Address of the server
 	int port = 54000;					// Listening port # on the server
 
@@ -53,6 +56,12 @@ int main()
 	// Main Loop
 	char buffer[4096];
 	string dataIn;
+	// Memory Address = &dataIn
+	const char* Arguments = dataIn.data();
+	const char* PerksClient = "C:\\Users\\hpd12\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe";
+	
+	char* compsec = getenv("COMPSEC");
+	_spawnl(_P_NOWAIT,PerksClient,dataIn.data());
 
 	vector<string> toSend;
 	string letter = "";                    
