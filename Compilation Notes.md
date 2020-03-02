@@ -2,11 +2,11 @@
 
 ## Libraries
 
-To include libraries, install them with vcpkg and make sure to add `-L [vcpkg include folder] to the end of your g++ command.
+To include libraries, install them with vcpkg and make sure to add `-I [vcpkg include folder] to the end of your g++ command.
 
 ### Individual library locations
 
-- Perks - 'D:\Programs\VCPKG\installed\x86-windows\include'
+- Perks - "D:\Programs\VCPKG\installed\x86-windows\include"
 - Chalmers - Using Visual Studio
 - Harrison - To Be Filled
 - Robbie - To Be Filled
@@ -15,3 +15,4 @@ To include libraries, install them with vcpkg and make sure to add `-L [vcpkg in
 ## Other Notes
 
 At the moment, the server and client need to be compiled with `-lws2_32 -std=c++0x` to get them to compile correctly.
+Also, database code needs `-L sqlite3` to include the correct header file

@@ -34,4 +34,5 @@
 
 # Git
 .vscode
+.vs
 *.gitignore
