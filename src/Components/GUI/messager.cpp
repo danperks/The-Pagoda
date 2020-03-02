@@ -24,9 +24,9 @@ int main(int argc, char** argv) // argc = Number of arguments       argv = Array
 
     else if (argc = 2){ // argv[1] is empty
 
-        cout << argv[2]
+        cout << argv[2];
 
-    }
+    };
   
     return 0; 
 } 
