@@ -14,6 +14,7 @@ class Interface {
 		cout << "2 - Join an exsisting game" << endl;
 		cout << "3 - See the leaderboard" << endl;
 		
+		};
 	};
 
 class Data {
