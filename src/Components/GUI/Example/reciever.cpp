@@ -6,7 +6,7 @@
 
 int main(){
     HWND foreground = GetActiveWindow();
-    SendMessage(foreground,WM_SETTEXT,0,(LPARAM)"The Pagoda - Window");
+    SendMessage(foreground,WM_SETTEXT,0,(LPARAM)_T("The Pagoda - Window"));
     LPWSTR window_title;
     GetWindowText(foreground,window_title,256);
 }

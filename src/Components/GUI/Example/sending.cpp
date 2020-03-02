@@ -1,23 +1,14 @@
 #include <tchar.h>
 #include <Windows.h>
-#include <string>
-
-using namespace std;
+#include <cstdio>
 
 int main()
 {
- COPYDATASTRUCT MyCDS;
- 
- string MyRec = "Message Recieved";
-
- MyCDS.dwData = 1;          // function identifier
- MyCDS.cbData = sizeof( MyRec );  // size of data
- MyCDS.lpData = &MyRec;  
-
-
- HWND term1=FindWindow(NULL, _T("The Pagoda - Main Menu"));
+ system("pause");
+ fopen("reciever.exe","r");
+ HWND term1=FindWindow(NULL, _T("The Pagoda - Window"));
  if(term1)
-    SendMessage(term1,WM_COPYDATA,0,(LPARAM)"Message Recieved");
+    SendMessage(term1,WM_SETTEXT,0,(LPARAM)"This is data");
  else
     MessageBox(0,_T("notepad ain't krap!"),_T("Report"),MB_OK);
 
