@@ -3,8 +3,6 @@
 #include <string>
 #include "picosha2.h"
 
-
-
 using namespace std;
 
 int create_db(){
@@ -12,6 +10,8 @@ int create_db(){
     string sql = "CREATE TABLE users("
                 "id INT PRIMARY KEY NOT NULL, "
                 "name TEXT NOT NULL,"
+                "elo INT NOT NULL,"
+                "games_won INT NOT NULL,"
                 "username TEXT NOT NULL,"
                 "passhash TEXT NOT NULL,"
                 "timecreate DATETIME NOT NULL)";
@@ -64,7 +64,7 @@ int user_create(){
     string passhash = picosha2::bytes_to_hex_string(temphash.begin(), temphash.end());
 
 
-    string sql("INSERT INTO users VALUES('"+ id +"', '"+ name +"', '"+ username +"', '"+ passhash +"', '"+ time +"');");
+    string sql("INSERT INTO users VALUES('"+ id +"', '"+ name +"', "1000" , "0", '"+ username +"', '"+ passhash +"', '"+ time +"');");
 
 
     exit = sqlite3_exec(DB, sql.c_str(), NULL, 0, &errormessage);
