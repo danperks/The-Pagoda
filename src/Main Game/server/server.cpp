@@ -1,4 +1,6 @@
 #include "crow_all.h"
+#include "json.hpp"
+
 #include <string>
 
 // include the path with crow_all.h in
@@ -16,7 +18,25 @@ class Network {
 };
 
 class Data {
-	int a = 1;
+    int doJson(gameId,command,data,sender,reciever){
+        
+    };
+
+	int parseJsonIn(dataIn){
+        jsonIn = StrToJson(dataIn);
+        string gameId = jsonIn["gameID"];
+        string command = jsonIn["command"];
+        string data = jsonIn["data"];
+        string sender = jsonIn["sender"];
+        string reciever = jsonIn["reciever"];
+        doJson(gameId,command,data,sender,reciever);
+    };
+
+    json toJson(const char* jsonString){
+        json jsonObj;
+        std::stringstream(jsonString) >> jsonObj;
+        return jsonObj;
+    };
 };
 
 
