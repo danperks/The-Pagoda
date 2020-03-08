@@ -12,7 +12,11 @@ using namespace std;
         CaseFileConsole.Create("Case File");
         ChatConsole.Create("Chat Window");
         TeamNotepadConsole.Create("Team Notepad");
-        
+        string dataIn;
+        cout<<"Enter Test"<<endl;
+        cin>>dataIn;
+        CaseFileConsole.SetAsDefaultOutput();
+        cout<<dataIn<<endl;
 
 
     }
