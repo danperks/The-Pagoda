@@ -33,14 +33,24 @@ int create_db(){
                 
 }
 
+static int callback(void* data, int argc, char** argv, char** azColName){ 
+    int i; 
+
+    fprintf(stderr, "%s: ", (const char*)data); 
+  
+    for (i = 0; i < argc; i++) { 
+        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL"); 
+    } 
+  
+    printf("\n"); 
+    return 0; 
+};
+
 
 int user_create(){
     sqlite3* DB;
     char* errormessage;
     int exit = sqlite3_open("thepagoda.db", &DB);
-    string query = "SELECT * FROM users;";
-
-     sqlite3_exec(DB, query.c_str(), NULL, NULL, NULL);
     
     string id;
     string name;
@@ -64,7 +74,7 @@ int user_create(){
     string passhash = picosha2::bytes_to_hex_string(temphash.begin(), temphash.end());
 
 
-    string sql("INSERT INTO users VALUES('"+ id +"', '"+ name +"', "1000" , "0", '"+ username +"', '"+ passhash +"', '"+ time +"');");
+    string sql("INSERT INTO users VALUES('"+ id +"', '"+ name +"', 1000 , 0, '"+ username +"', '"+ passhash +"', '"+ time +"');");
 
 
     exit = sqlite3_exec(DB, sql.c_str(), NULL, 0, &errormessage);
@@ -96,27 +106,61 @@ int user_delete(){
 
     string sql("DELETE FROM users WHERE id = "+ id +";");
 
-    cout << sql;
-
     exit = sqlite3_exec(DB, sql.c_str(), NULL, 0, &errormessage);
+
     if (exit != SQLITE_OK) {
-        cout << "Could not delete";
+        cout << "Could not order";
         sqlite3_free(errormessage);
     }
     else
     {
-        cout << "User Deleted";    
+        cout << "SELECT * users ";    
         }
 
 }
-    
 
-int main()
-{   
+int printdb(){
+    sqlite3* DB;
+    int exit = 0;
+    char* errormessage;
+    string id;
+    exit = sqlite3_open("thepagoda.db", &DB);
+
+    string sql = "SELECT * FROM users";
+
+    exit = sqlite3_exec(DB, sql.c_str(), callback, 0, NULL);
+
+    
+}
+
+int leaderboards(){
+    sqlite3* DB;
+    int exit = 0;
+    char* errormessage;
+    string id;
+    exit = sqlite3_open("thepagoda.db", &DB);
+
+    string sql = ("SELECT ELO, username, id FROM users ORDER BY ELO, ELO DESC");
+
+    exit = sqlite3_exec(DB, sql.c_str(), callback, 0, NULL);
+    if (exit != SQLITE_OK){
+        cout << "Could not delete";
+    }
+    else
+    {
+        cout << errormessage;
+    }
+}
+
+
+int main(){ 
+
     sqlite3* DB;
     int exit = 0;
     exit = sqlite3_open("thepagoda.db", &DB);
-    
+    leaderboards();
+    // user_create();
+
     if (exit) {
         cout << "Error opening the database" << endl;
         return (-1);
@@ -124,9 +168,11 @@ int main()
     else
     {
         cout << "Database has been opened" << endl;
-    user_create();
     sqlite3_close(DB);
     return (0);
     }
     
-}
+};
+
+
+// g++ ...  -l sqlite3

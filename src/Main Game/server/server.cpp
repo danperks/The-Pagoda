@@ -1,5 +1,6 @@
 #include "crow_all.h"
 #include "json.hpp"
+#include <stdlib.h>
 
 #include <string>
 
@@ -13,23 +14,37 @@
 using namespace std;
 
 class Network {
-	int a = 1;
+	int sendAll(gameId, data, sender){
+        1+1;
+    };
+    int sendOne(gameID, data, sender, reciever){
+        1+1;
+    };
 };
 
 class Data {
     int doJson(gameId,command,data,sender,reciever){
-        1+1;
+        if (command = "quit"){
+            void exit(1);
+        }
+        if (command = "message"){
+            ProcMessage();
+        }
+        if (command = "whisper"){
+            ProcWhisper();
+        }
+        
     };
 
 	int parseJsonIn(dataIn){
-        jsonIn = StrToJson(dataIn);
-        string gameId = jsonIn["gameID"];
+        jsonIn = StrToJson(dataIn); // converts string to json obj
+        string gameId = jsonIn["gameID"];  // gets data and saves to var
         string command = jsonIn["command"];
         string data = jsonIn["data"];
         string sender = jsonIn["sender"];
         string reciever = jsonIn["reciever"];
-        doJson(gameId,command,data,sender,reciever);
-    };
+        doJson(gameId,command,data,sender,reciever); // passes all the data to dojson fun
+        };
 
     json toJson(const char* jsonString){
         json jsonObj;
@@ -37,21 +52,14 @@ class Data {
         return jsonObj;
     };
 
-    int messageIn(){
-        1+1;
+    int ProcMessage(gameID, data, sender){
+        sendAll()
     }
 
-    int whisperIn(){
-        1+1;
+    int ProcWhisper(gameID, data, sender, reciever){
+        sendOne()
     }
 
-    int messageOut(){
-        1+1;
-    }
-
-    int whisperOut(){
-        
-    }
 };
 
 
