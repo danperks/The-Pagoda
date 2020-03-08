@@ -1,8 +1,12 @@
-#include "crow_all.h"
 #include "json.hpp"
 #include <stdlib.h>
-
+#include <iostream>
+#include <WS2tcpip.h>
+#include <sstream>
+#include <fstream>
 #include <string>
+#include <cstdio>
+#include <ctime>
 
 // include the path with crow_all.h in
 // include Boost lib
@@ -22,7 +26,10 @@ class Network {
     };
 };
 
-class Data {
+class Data {// this hosuld have entrie static methods as far as i can tell but as it isnt done ill leave it be
+    static int CreateGame(){//function to return gameID;
+        return 12345;//should be a game id - going ot assume 12345 at present
+    }
     int doJson(gameId,command,data,sender,reciever){
         if (command = "quit"){
             void exit(1);
@@ -64,14 +71,160 @@ class Data {
 
 
 class Main {
-
-    int start {
+    SOCKET client ;
+    int gameID;
+    vector<int> ConnectedClients;
+    int start() {
         1+1;
+        Data data .CreateGame();
+        ServerStart();
+
+    }
+    int ServerStart()
+        {
+            // Initialze winsock
+            WSADATA wsData;
+            WORD ver = MAKEWORD(2, 2);
+
+            int wsOk = WSAStartup(ver, &wsData);
+            if (wsOk != 0)
+            {
+                cerr << "Can't Initialize winsock! Quitting" << endl;
+                return 0;
+            }
+            
+            // Create a socket
+            SOCKET listening = socket(AF_INET, SOCK_STREAM, 0);
+            if (listening == INVALID_SOCKET)
+            {
+                cerr << "Can't create a socket! Quitting" << endl;
+                return 0;
+            }
+
+            // Bind the ip address and port to a socket
+            sockaddr_in hint;
+            hint.sin_family = AF_INET;
+            hint.sin_port = htons(54000);
+            hint.sin_addr.S_un.S_addr = INADDR_ANY;
+            
+            bind(listening, (sockaddr*)&hint, sizeof(hint));
+            listen(listening, SOMAXCONN);
+
+            fd_set master; // Create the FD
+            FD_ZERO(&master); // Set the FD to zero
+            FD_SET(listening, &master); // Add the listening socket
+
+            // this will be changed by the \quit command (see below, bonus not in video!)
+            bool running = true; 
+            clock_t  RoundStartTime = time(0);
+            clock_t RoundEndTime = RoundStartTime + (5*60);// oculd do this with a while loop timer but idk this makes mroe sense now? ADDS 5 Minute
+            bool isTimeToVote = false;//will somehow need to update list of active connections in the game once one has been kicked
+           
+            while (running)
+            {
+                if (RoundEndTime < time(0)){//check if time has elapsed - would like to test this function in isolation tbf but meh half of this is placeholder it can wait, itll fail in favour anyway if it doesnt work
+                    isTimeToVote=true;
+                }
+                fd_set copy = master; // Copy the list to maintain inactive conns - non active conns are not returned
+                int socketCount = select(0, &copy, nullptr, nullptr, nullptr); // Get active conns
+                for (int i = 0; i < socketCount; i++) // Loop through all the current & potential connections
+                {
+                    if(isTimeToVote){
+                        Voting(master.fd_count);
+                        RoundEndTime = RoundEndTime+(5*60); // if the one above works this will , if it doesnt it can be looked at another time and jsut serve as pseudo
+                    }
+                    SOCKET sock = copy.fd_array[i]; // Recieve data from the socket
+                    if (sock == listening) // Check if connection request (aka new user) // for hd viva
+                    {
+                        if(master.fd_count <=9){
+                            client = accept(listening, nullptr, nullptr); // Accept a new conn
+                            FD_SET(client, &master); // Add new conn to FD
+                            string welcomeMsg = "Welcome to the Game!\r\n"; // Define welcome message
+                            send(client, welcomeMsg.c_str(), welcomeMsg.size() + 1, 0);//send welecom messsage
+                        }
+                        else{
+                            client = accept(listening,nullptr,nullptr);
+                            string MaximumGameMessage = "Quit Message"; // send json quit command here;
+                            send(client,MaximumGameMessage.c_str(),MaximumGameMessage.size()+1,0);
+                            continue;//client rejected
+                        } // Send welcome message
+                    }
+                    else // Its an inbound message
+                    {
+                        char buf[4096]; // Allocate memory for message
+                        ZeroMemory(buf, 4096); // Zero the memory
+                        int bytesIn = recv(sock, buf, 4096, 0); // Recieve the message (in bytes)
+                        string clientText = string(buf, bytesIn); // Convert message to string
+                        if (!clientText.empty() && clientText[clientText.length()-1] == '\n') { // Removes new line from message
+                            clientText.erase(clientText.length()-1);
+                        }
+                        if (bytesIn <= 0) // Checks if the response was blank - not blank unless disconnected
+                        {
+                            closesocket(sock); // Closes the socket connection
+                            FD_CLR(sock, &master); // Removes the socket from FD
+                        }
+                        else if (clientText == "\n" || clientText == "\r" || clientText == " " || clientText ==  ""){ 
+                            continue; // Ignores empty message
+                        }
+                        else {
+
+                            cout << "Client: " + sock << endl;
+                            cout << "Message: " + clientText << endl;
+                            cout << "  " << endl;
+
+                            for (int i = 0; i < master.fd_count; i++) // Sends message to all sockets 
+                            {
+                                SOCKET outSock = master.fd_array[i];
+                                if (outSock != listening && outSock != sock) // Bypasses listening socket
+                                {
+                                    ostringstream ss;
+                                    ss << "SOCKET #" << sock << ": " << buf << "\r\n";
+                                    string strOut = ss.str();
+
+                                    send(outSock, strOut.c_str(), strOut.size() + 1, 0);
+                                }
+                            }
+                            if
+                        }
+                    }
+
+                }
+            }
+
+            // If here, the server is shutting down
+
+            FD_CLR(listening, &master); // Removes listening socket
+            closesocket(listening); // Closes listening socket connection
+            
+            // Sends shutdown message, and disconnects sockets
+            string msg = "Server is shutting down. Goodbye\r\n";
+            while (master.fd_count > 0)
+            {
+                SOCKET sock = master.fd_array[0];
+                send(sock, msg.c_str(), msg.size() + 1, 0);
+                FD_CLR(sock, &master);
+                closesocket(sock);
+            }
+            WSACleanup(); // Cleanup winsock
+        }
+
+        int Voting(int AmountOfPlayersLeft){
+            //take current amoutn of players
+            //take votes to vote off each player
+            //count votes for each player
+            //players wiht msot votes are sent messages with json command informing them theyve been voted out
+
+        }
+
+        int MessageSend(string MessageToSend){
+             send(client, MessageToSend.c_str(), MessageToSend.size() + 1, 0);//send welecom messsage
+        }
+
 
         /*
         TODO:
         - Boot the server
-        - Accept first 10 connections
+        - Accept first 10 connections 
         - Create a gameID (in database)
         - Pass the gameID to the clients
         - Link the clients to their userID (recieve them from client as joining message?)
@@ -106,8 +259,17 @@ class Main {
 
         Client will send the message and whisper the same as the server
         */
-    }
-}
+    
+
+
+
+};
+
+
+
+
+
+
 
 // Should be untouched, put code in Main class
 int main() {
