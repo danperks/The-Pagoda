@@ -11,11 +11,12 @@
 
 using namespace std;
 
-class Network {
-	int a = 1;
+class Network { // For sending and recieving data
+    public:
+	    int a = 1;
 };
 
-class Interface {
+class Interface { // For running the UI
     public:
         int start() {
             crow::SimpleApp app;
@@ -78,15 +79,16 @@ class Interface {
         }
 };
 
-class Database {
-	int a = 1;
+class Game { // For running the game logic
+    public: 
+	    int a = 1;
 };
 
 
 class Main {
     int init {
         Interface gui;
-        Database data;
+        Database game;
         Network net;
         return 0;
     };

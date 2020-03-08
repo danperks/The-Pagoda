@@ -8,7 +8,6 @@
 // -D_WIN32_WINNT=0x0601 -std=c++11 -lws2_32 -lmswsock
 
 #define BOOST_THREAD_USE_LIB
-
 #define _WIN32_WINNT_WIN10                  0x0A00
 
 using namespace std;
@@ -19,7 +18,7 @@ class Network {
 
 class Data {
     int doJson(gameId,command,data,sender,reciever){
-        
+        1+1;
     };
 
 	int parseJsonIn(dataIn){
@@ -37,6 +36,22 @@ class Data {
         std::stringstream(jsonString) >> jsonObj;
         return jsonObj;
     };
+
+    int messageIn(){
+        1+1;
+    }
+
+    int whisperIn(){
+        1+1;
+    }
+
+    int messageOut(){
+        1+1;
+    }
+
+    int whisperOut(){
+        
+    }
 };
 
 
