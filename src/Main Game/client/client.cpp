@@ -92,7 +92,7 @@ class Main {
         Network net;
         return 0;
     };
-    
+    //lockout message once voting has happend , wait untill the unlcok message is broadcast
     /*
     TODO:
     - Boots the GUI
