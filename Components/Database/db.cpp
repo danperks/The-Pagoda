@@ -158,7 +158,7 @@ int main(){
     sqlite3* DB;
     int exit = 0;
     exit = sqlite3_open("thepagoda.db", &DB);
-    leaderboards();
+    // leaderboards();
     // user_create();
 
     if (exit) {
