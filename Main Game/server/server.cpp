@@ -29,7 +29,7 @@ class Network {
 
 class Data {// this should have entrie static methods as far as i can tell but as it isnt done ill leave it be
     
-    public int CreateGame(){//function to return gameID;
+    int CreateGame(){//function to return gameID;
         return 12345;//should be a game id - going ot assume 12345 at present
     }
     int doJson(gameId,command,data,sender,reciever,kick,winner){

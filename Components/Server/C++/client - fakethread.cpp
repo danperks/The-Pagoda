@@ -17,11 +17,20 @@ using namespace std;
 // TODO Need to set the socket to non blocking
 
 int main()
+
 {
+	int a = 1;
+        int gameID = 0;
+        int userID=0;
+        string LockComamnd = "{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"quit\",\"sender\":\"server\",\"recipient\":"+to_string(userID)+"}";
+        string VoteComamnd = "{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"vote\",\"sender\":\"server\",\"recipient\":ALL}";
+		string UnlockCommand = "{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"unlock\",\"sender\":\"server\",\"recipient\":ALL}";
+		string KickedCommand = "{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"kick\",\"sender\":\"server\",\"recipient\":"+to_string(userID)+"}";
+		string WinnerCommand = "{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"Winner\",\"sender\":\"server\",\"recipient\":"+to_string(userID)+"}";
 	//string PerksClient ="C:\\Users\\hpd12\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe";
 	string address = "127.0.0.1";		// IP Address of the server
 	int port = 54000;					// Listening port # on the server
-
+	int clientUnlocked = true;
 	WSAData data;
 	int wsResult = WSAStartup(MAKEWORD(2, 2), &data);
 	if (wsResult != 0)
@@ -77,24 +86,47 @@ int main()
 
 		while(true){
 			if (_kbhit() ) {
-				int key_code = _getch();
-				string key = to_string(key_code);
-				if (key == "13"){
-					break;
-				}
-				printf("The character is %c\n", key);
-				toSend.push_back(key);
+				cout<<"Type Here"<<endl;
+				string userentry;
+				cin >>userentry;
+				toSend.push_back(userentry);
 			}
 			else {
 				int dataOut = recv(sock, buffer, 4096, 0);
 				if (dataOut > 0)
 				{
-					printf("SERVER> " + string(buffer, 0, dataOut));
+					cout<<"SERVER> " + string(buffer, 0, dataOut)<<endl;
+					 if(LockComamnd == string(buffer, 0, dataOut)){
+						                                // go over this again
+                                clientUnlocked == false;
+								cout<<"Console Locked , Vote Recieved"<<endl;
+								while(clientUnlocked == false){
+									//waiting for unlock command;
+									int dataOut2 = recv(sock,buffer,4096,0);
+									if(UnlockCommand == string(buffer,0,dataOut2)){
+										clientUnlocked == true; // client then unlocked
+									}
+								}
+
+                                
+				}
+				if(KickedCommand == string(buffer,0,dataOut)){
+					cout<<"You are no longer a contestant to win the game. Thank You. Come Again."<<endl;
+					cout<<"You will be forcefully disconnected. You have no choice."<<endl;
+					
+					break;
+				}
+				if(WinnerCommand == string(buffer,0,dataOut)){
+					cout<<"You have played well. You are the winner. You should be ashamed. Thank You . Come Again."<<endl;
+					cout<<"You will now be forcefully disconnected. You have no choice"<<endl;
+					
+					break;
+					
 				}
 			}
 		}
 		
-		int sendResult = send(sock, dataIn.c_str(), dataIn.size() + 1, 0);
+		int sendResult = send(sock, toSend.front().c_str(), toSend.front.c_str() + 1, 0);
 	}
 
 
