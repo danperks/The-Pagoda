@@ -155,8 +155,10 @@ class Main {
                         }
                         else{
                             client = accept(listening,nullptr,nullptr);
-                            string MaximumGameMessage = "Quit Message"; // send json quit command here;
+                            string MaximumGameMessage = "Quit Message";
+                             // send json quit command here;
                             send(client,MaximumGameMessage.c_str(),MaximumGameMessage.size()+1,0);
+                            FD_CLR(client,&master);
                             continue;//client rejected
                         } // Send welcome message
                     }
@@ -192,7 +194,7 @@ class Main {
                                         if(RoundNumber == 4){
                                             FD_CLR(listening, &master); // Removes listening socket
                                             closesocket(listening);
-                                            string msg = "Server is shutting down. Goodbye\r\n";
+                                            string msg = "Winner Decalred - Server shutting Down\r\n";
                                             while (master.fd_count > 0){
                                                 SOCKET sock = master.fd_array[0];
                                                 send(sock, msg.c_str(), msg.size() + 1, 0);
