@@ -7,6 +7,7 @@
 #include <string>
 #include <cstdio>
 #include <ctime>
+#include "C:\Users\RJ_cr\OneDrive\Desktop\The-Pagoda\Components\Server\C++\matchmaking.h"
 
 // include the path with crow_all.h in
 // include Boost lib
@@ -26,12 +27,12 @@ class Network {
     };
 };
 
-class Data {// this hosuld have entrie static methods as far as i can tell but as it isnt done ill leave it be
+class Data {// this should have entrie static methods as far as i can tell but as it isnt done ill leave it be
     
     int CreateGame(){//function to return gameID;
         return 12345;//should be a game id - going ot assume 12345 at present
     }
-    int doJson(gameId,command,data,sender,reciever){
+    int doJson(gameId,command,data,sender,reciever,kick,winner){
         if (command = "quit"){
             void exit(1);
         }
@@ -40,6 +41,14 @@ class Data {// this hosuld have entrie static methods as far as i can tell but a
         }
         if (command = "whisper"){
             ProcWhisper();
+        }
+
+        if (command = "kick"){
+            Kick();
+        }
+        
+        if (command = "winner"){
+            Winner();
         }
         
     };
@@ -51,7 +60,7 @@ class Data {// this hosuld have entrie static methods as far as i can tell but a
         string data = jsonIn["data"];
         string sender = jsonIn["sender"];
         string reciever = jsonIn["reciever"];
-        doJson(gameId,command,data,sender,reciever); // passes all the data to dojson fun
+        doJson(gameId,command,data,sender,reciever,kick,winner); // passes all the data to dojson fun
         };
 
     json toJson(const char* jsonString){
@@ -59,6 +68,14 @@ class Data {// this hosuld have entrie static methods as far as i can tell but a
         std::stringstream(jsonString) >> jsonObj;
         return jsonObj;
     };
+
+    int Kick(ID){
+        kick();
+    }
+
+    int GetWinner(winnerID){
+        winner();
+    }
 
     int ProcMessage(gameID, data, sender){
         sendAll();
@@ -69,6 +86,7 @@ class Data {// this hosuld have entrie static methods as far as i can tell but a
     }
 
 };
+
 
 
 class Main {
@@ -284,7 +302,7 @@ class Main {
                 //2 person kicked
                 MessageSend("SERVER SEND TO ALL PLEASE 2 Will be kicked");//fill in correct json here
             }
-            else if(RoundNumber ==3){
+            else if(RoundNumber == 3){
                 MessageSend("SERVER SEND TO ALL PLEASE VOTE 1 will be kicked");
             }
             else{
@@ -320,7 +338,7 @@ class Main {
             - In the last round, the majority voted person wins
             - All clients are told to leave
             - The GameID is deleted
-            - ELOs on db are updated
+            - ELOs on db are updated (done)
 
 
         */
@@ -336,6 +354,9 @@ class Main {
 
        Whisper:
        {"gameID":"12345","type":"whisper","data":"Let's team up!","sender":"456","recipient":"789"}
+
+       Kick:
+       {"gameID":"12345","type":"command","data":"kick", "ID":"12345"}
         
 
         Client will send the message and whisper the same as the server

@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
@@ -62,6 +63,26 @@ int main()
 				FD_SET(client, &master); // Add new conn to FD
 				string welcomeMsg = "Welcome to the Game!\r\n"; // Define welcome message
 				send(client, welcomeMsg.c_str(), welcomeMsg.size() + 1, 0); // Send welcome message
+				// add to a vector, check if 10
+				// create game id
+
+				cin << "id";
+				int n = 1
+				int gameArray[10];
+				gameArray[n] = id
+				n +=1
+
+				if (size(gameArray) == 10){
+					for (int player = 1; player < 11; player++){
+						// takes id's and adds them to game (not built)
+					}
+					// connect to game using id's in array
+					// delete array
+				}
+				else{
+					cout << "you are currently in a queue with" + ((size(gameArray))-1) + " other people.";
+				}
+
 			}
 			else // Its an inbound message
 			{

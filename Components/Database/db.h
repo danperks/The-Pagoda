@@ -153,7 +153,7 @@ int leaderboards(){
 }
 
 
-int main(){ 
+int connection(){ 
 
     sqlite3* DB;
     int exit = 0;
@@ -174,5 +174,22 @@ int main(){
     
 };
 
+int doExec(){
+    sqlite3* DB;
+    int exit = 0;
+    char* errormessage;
+    string id;
+    exit = sqlite3_open("thepagoda.db", &DB);
+    exit = sqlite3_exec(DB, sql.c_str(), callback, 0, NULL);
+};
 
+int doQuery(){
+    sqlite3* DB;
+    int exit = 0;
+    char* errormessage;
+    string id;
+    exit = sqlite3_open("thepagoda.db", &DB);
+    sqlite3_exec(DB, query.c_str(), callback, 0, NULL);
+
+}
 // g++ ...  -l sqlite3
