@@ -6652,7 +6652,7 @@ namespace crow
                     else
                     {
                         buf[1] += 127;
-                        *(uint64_t*)(buf+2UL) = ((1==htonl(1)) ? (uint64_t)size : ((uint64_t)htonl((size) & 0xFFFFFFFFUL) << 32UL) | htonl((size) >> 32UL));
+                        *(uint64_t*)(buf+2) = ((1==htonl(1)) ? (uint64_t)size : ((uint64_t)htonl((size) & 0xFFFFFFFF) << 32) | htonl((size) >> 32));
                         return {buf, buf+10};
                     }
                 }
