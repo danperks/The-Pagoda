@@ -13,6 +13,24 @@ const string server = "private-db-mysql-lon1-94725-do-user-7232253-0.a.db.ondigi
 const string username = "doadmin";
 const string password = "vjaoa4grnxedx1jf";
 
+int connectionDB(){
+    Driver *driver;
+    Connection *con;
+    Statement &stmt;
+    PreparedStatement *pstmt;
+
+    try{
+        driver = get_driver_instance();
+        con = driver->connect(server, username, password);
+    }
+
+    catch (SQLException e){
+        cout << "Cant connect to server." << e.what();
+        system("pause");
+        exit(1);
+    }
+
+};
 
 int createDB(){
     connectionDB();
@@ -62,24 +80,6 @@ int removeUser(){
 
 }
 
-int connectionDB(){
-    Driver *driver;
-    Connection *con;
-    Statement &stmt;
-    PreparedStatement *pstmt;
-
-    try{
-        driver = get_driver_instance();
-        con = driver->connect(server, username, password);
-    }
-
-    catch (SQLException e){
-        cout << "Cant connect to server." << e.what();
-        system("pause");
-        exit(1);
-    }
-
-};
 
 int main(){
     1+1;
