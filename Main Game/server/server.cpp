@@ -152,7 +152,7 @@ class Main {
 
                 }
                 if(AmountOfVotesRemaining == 0){
-                    MessageSend("Unlock Message");// this can be a json command , but placeholder boilerplate atm , stops people spamming multiple votes if their client jsut simply discards the message on transmission.
+                    MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"unlock\",\"sender\":\"server\",\"recipient\":\"ALL\"}");// this can be a json command , but placeholder boilerplate atm , stops people spamming multiple votes if their client jsut simply discards the message on transmission.
                 }
                 fd_set copy = master; // Copy the list to maintain inactive conns - non active conns are not returned
                 int socketCount = select(0, &copy, nullptr, nullptr, nullptr); // Get active conns
@@ -168,12 +168,12 @@ class Main {
                         if(master.fd_count <=9){
                             client = accept(listening, nullptr, nullptr); // Accept a new conn
                             FD_SET(client, &master); // Add new conn to FD
-                            string welcomeMsg = "Welcome to the Game!\r\n"; // Define welcome message
+                            string welcomeMsg = "{\"gameID\":"+to_string(gameID)+",\"type\":\"broadcast\",\"data\":\""+"Welcome To the Game"+"\",\"sender\":\"server\",\"recipient\":"+client+"} + \r\n";  // Define welcome message
                             send(client, welcomeMsg.c_str(), welcomeMsg.size() + 1, 0);//send welecom messsage
                         }
                         else{
                             client = accept(listening,nullptr,nullptr);
-                            string MaximumGameMessage = "Quit Message"; // send json quit command here;
+                            string MaximumGameMessage = "{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"kick\",\"sender\":\"server\",\"recipient\":"+client+"}";; // send json quit command here;
                             send(client,MaximumGameMessage.c_str(),MaximumGameMessage.size()+1,0);
                             continue;//client rejected
                         } // Send welcome message
@@ -203,7 +203,7 @@ class Main {
                             if(isTimeToVote){//votes remain anonymous so not sent back round in ring ot all
                                     RoundEndTime = RoundEndTime+(5*60); // if the one above works this will , if it doesnt it can be looked at another time and jsut serve as pseudo
                                     AmountOfVotesRemaining = AmountOfVotesRemaining -1;
-                                    MessageSend("Vote Has Been Received - Amount Left - " + AmountOfVotesRemaining);// have this act as a lockout message asweell
+                                    MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"broadcast\",\"data\":\""+"Vote Has Been Received - Amount Left - " + AmountOfVotesRemaining+"\",\"sender\":\"server\",\"recipient\":"+"ALL"+"}");// have this act as a lockout message asweell
                                     UserToKick.push_back(stoi(clientText));// seesm to be one that ignores letters
                                     if (AmountOfVotesRemaining ==0){
                                         //calculate most common elelemtns
@@ -289,25 +289,33 @@ class Main {
             }
             else if (RoundNumber ==4 ){
                 //vote for winner
-                MessageSend("Winner is "+ MostCommonItem);//sort these placeholders out;
+                MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"broadcast\",\"data\":\""+"Winner is "+MostCommonItem+"\",\"sender\":\"server\",\"recipient\":"+"ALL"+"}"));
+                MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"Winner\",\"sender\":\"server\",\"recipient\":"+to_string(MostCommonItem)+"}");
+                //sort these placeholders out;
                 return fdMaster;
             }
 
         }
         
 
-        void Voting(fd_set FDClients,int RoundNumber){
+        void Voting(fd_set FDClients,int RoundNumber){// message sent to all clients in a psuedo json format, its a string not even using it as json rather substring laughs. 
             int CurrentAmountOfPlayers = FDClients.fd_count;
             if(RoundNumber == 1 || RoundNumber ==2){
                 //2 person kicked
-                MessageSend("SERVER SEND TO ALL PLEASE 2 Will be kicked");//fill in correct json here
+                MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"broadcast\",\"data\":\""+"2 will be kicked"+"\",\"sender\":\"server\",\"recipient\":"+"ALL"+"}");
+                MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"vote\",\"sender\":\"server\",\"recipient\":\"ALL\"}");//fill in correct json here
             }
             else if(RoundNumber == 3){
-                MessageSend("SERVER SEND TO ALL PLEASE VOTE 1 will be kicked");
+                 MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"broadcast\",\"data\":\""+"1 will be kicked"+"\",\"sender\":\"server\",\"recipient\":"+"ALL"+"}");
+                MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"vote\",\"sender\":\"server\",\"recipient\":\"ALL\"}");
             }
             else{
-                MessageSend("SERVER SEND TO ALL PLEASE VOTE FOR THE WINNER");//vote for your winner;
+                 MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"broadcast\",\"data\":\""+"Vote For Winner"+"\",\"sender\":\"server\",\"recipient\":"+"ALL"+"}");
+                MessageSend("{\"gameID\":"+to_string(gameID)+",\"type\":\"command\",\"data\":\"vote\",\"sender\":\"server\",\"recipient\":\"ALL\"}");//vote for your winner;
             }
+
+            //would specify int he json hwo many are being kicked but its getting on a bit. lets get it done now
+
             //take current amoutn of players
             //take votes to vote off each player
             //count votes for each player

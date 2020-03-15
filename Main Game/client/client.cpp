@@ -180,9 +180,11 @@ class Game { // For running the game logic
 				int dataOut = recv(sock, buffer, 4096, 0);
 				if (dataOut > 0)
 				{
-					cout<<"SERVER> " + string(buffer, 0, dataOut)<<endl;
+                     string datatoserve = string(buffer,0,dataOut);
+                     
 					 if (string(buffer,0,dataOut).find("recipient\":"+to_string(userID)) || string(buffer,0,dataOut).find("recipient\": ALL")){
 						 //checks if directed at you or all , those not will jsut straight up be ignored
+
 					 if(LockComamnd == string(buffer, 0, dataOut)){
 						                                // go over this again
                                 clientUnlocked == false;
@@ -194,6 +196,9 @@ class Game { // For running the game logic
 										clientUnlocked == true; // client then unlocked
 									}
 								}
+                     }
+                                datatoserve.substr(datatoserve.find_first_of("data\":")+1);
+                                cout<<"Message> " + datatoserve<<endl;
 
                                 
 				}
