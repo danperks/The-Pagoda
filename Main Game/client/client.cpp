@@ -7,6 +7,7 @@
 #include <windows.h>
 #include <iostream>
 #include <winsock2.h>
+#include "encrypt.hpp";
 
 // include the path with crow_all.h in
 // include Boost lib
@@ -230,9 +231,9 @@ class Game { // For running the game logic
 
 
 class Main {
-    int init {
+    int init() {
         Interface gui;
-        Database game;
+        gui.start();
         Network net;
         return 0;
     };
