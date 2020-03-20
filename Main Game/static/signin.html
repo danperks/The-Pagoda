@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Pagdoa - Sign In</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/default/bulmaswatch.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="content">
+            <h1 class="title">The Pagoda - Sign In</h1>
+            <h4>Enter your login details below</h4>
+            <h6>If you don't have an account already, click here to <a href="/signup">Sign Up</a></h6>
+            <div class="field  is-expanded">
+                <form id="submitMessage" class="field has-addons" action="/api/signin">
+                    <p class="control">
+                        <input class="input" type="text" placeholder="Username">
+                    </p>
+                    <p class="control">
+                        <input class="input" type="text" placeholder="Password">
+                    </p>
+                    <button type="submit" class="button  is-primary" id="send">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
